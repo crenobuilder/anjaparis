@@ -26,11 +26,9 @@
   --c1: #E4DCC8;
   --c2: #B7A57E;
 
-  /* Typographie réelle Anja Paris — Work Sans par défaut (Archivo en
-     alternative confirmée par le client : changer les deux lignes
-     ci-dessous en "Archivo" suffit, la police est déjà chargée). */
-  --font-display: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-text:    "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Typographie réelle Anja Paris — Archivo, confirmée par le client. */
+  --font-display: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-text:    "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --fs-giant: clamp(3.5rem, 11vw, 9rem);
   --fs-hero:  clamp(2.25rem, 5vw, 3.75rem);
@@ -186,6 +184,16 @@ p { margin: 0; }
   object-fit: cover; opacity: 0; transition: opacity .5s var(--ease);
 }
 .ph img.is-loaded { opacity: 1; }
+
+/* Packshots détourés (fond retiré) : fond uni de marque plutôt que
+   blanc, et object-fit: contain pour ne jamais rogner la silhouette
+   du maillot — à la différence des photos pleine page en "cover". */
+.ph--cutout {
+  background-image: none;
+  background-color: var(--ivory-2);
+}
+.ph--cutout::after { display: none; }
+.ph--cutout img { object-fit: contain; padding: 8%; }
 
 .ph__flag {
   position: absolute; left: .75rem; bottom: .75rem; z-index: 2;
