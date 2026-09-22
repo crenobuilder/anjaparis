@@ -15,15 +15,20 @@ remplace automatiquement, sans toucher au code.
 
 | Fichier attendu | Utilisation |
 |---|---|
-| `hero-collab.jpg` | Visuel du bandeau collab sur la home (juste sous le hero) |
-| `collab-le-solaire.jpg` | Carrousel « Anja × Havaianas, la collection » — pièce 1 |
-| `collab-le-rio.jpg` | Carrousel collab — pièce 2 |
+| `collab-le-rio.jpg` | Carrousel « Anja × Havaianas, la collection » — pièce 2 (deux pièces) |
 | `collab-le-terracotta.jpg` | Carrousel collab — pièce 3 |
 
-`collab.html` (la page dédiée à la collaboration) reste également en
-dégradés placeholder sur toute sa partie visuelle : c'est un produit
-fictif, il n'existe intentionnellement aucune vraie photo à y mettre tant
-que la collab n'est pas réelle.
+`collab.html` (la page dédiée) reste en dégradés placeholder sur sa partie
+visuelle : elle n'a pas encore reçu de pass dédié avec les nouveaux visuels
+(voir ci-dessous), à la différence de la home.
+
+## Reçu et intégré — collaboration Anja × Havaianas
+
+| Fichier | Origine | Utilisation |
+|---|---|---|
+| `hero-collab.jpg` | Visuel fourni par le client (déjà floqué « havaianas × Anja Paris ») | Hero plein écran de la home |
+| `hero-collab-tag.jpg` | Recadrage de `collab-duo-le-fidele.jpg` | Carte produit flottante du hero |
+| `collab-duo-le-fidele.jpg` | Photo produit fournie par le client, floquée par nos soins (lockup recomposé avec le vrai logo Anja — l'original généré utilisait une police "Anja" inventée par l'IA, différente du logo réel) | Bandeau collab + carrousel « Anja × Havaianas » |
 
 ## Déjà intégré — catalogue réel Anja
 
