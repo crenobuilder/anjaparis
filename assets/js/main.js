@@ -108,6 +108,16 @@
       item.querySelectorAll('.mega a').forEach(function (a) {
         a.addEventListener('click', function () { close(); });
       });
+
+      // Le panneau occupe tout l'écran sous le header (comportement
+      // voulu, façon Polène) : un clic sur son fond, hors lien, doit
+      // le refermer — sinon rien sous le header n'est plus cliquable.
+      if (mega) {
+        mega.addEventListener('click', function (e) {
+          if (e.target.closest('a')) return;
+          close();
+        });
+      }
     });
 
     document.addEventListener('keydown', function (e) {

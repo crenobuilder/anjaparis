@@ -257,11 +257,17 @@ body.menu-open .header::before { opacity: 0; }
 }
 
 .logo {
-  font-family: var(--font-display);
-  font-size: clamp(1.05rem, 1.6vw, 1.375rem);
-  letter-spacing: .32em; text-indent: .32em; text-transform: uppercase;
-  white-space: nowrap;
+  display: inline-flex;
+  color: currentColor;
+  transition: color .4s var(--ease);
 }
+.logo svg {
+  height: clamp(22px, 2.6vw, 30px);
+  width: auto;
+  fill: currentColor;
+  display: block;
+}
+.footer__brand .logo svg { height: 26px; }
 
 .nav { display: flex; align-items: center; gap: clamp(1rem, 1.8vw, 2rem); }
 .nav--left { justify-content: flex-start; }
@@ -419,6 +425,30 @@ body.menu-open .drawer { transform: translateX(0); }
 .hero__tag__body { padding: .85rem 1rem 1.1rem; }
 .hero__tag__body strong { display: block; font-family: var(--font-display); font-size: 1.0625rem; font-weight: 400; }
 .hero__tag__body span { display: block; margin-top: .2rem; font-size: var(--fs-small); color: var(--ink-mute); }
+
+/* --------------------------------------------------------------------------
+   10b. Bandeau collaboration — événement de saison, sous le hero
+   -------------------------------------------------------------------------- */
+.collab-band { position: relative; background: var(--ink); color: var(--paper); }
+.collab-band__inner {
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 5rem);
+  align-items: center; padding-block: clamp(3rem, 6vw, 5rem);
+}
+.collab-band__badge {
+  display: inline-flex; align-items: center; gap: .55rem;
+  padding: .45rem 1rem; border: 1px solid rgba(255,255,255,.3); border-radius: 100px;
+  font-size: var(--fs-micro); letter-spacing: .16em; text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.collab-band__badge i { width: 6px; height: 6px; border-radius: 50%; background: #F2C230; }
+.collab-band__title {
+  font-size: var(--fs-h1); text-transform: uppercase; letter-spacing: .04em;
+  margin-bottom: 1.25rem;
+}
+.collab-band__title .x { font-weight: 300; opacity: .55; margin-inline: .25rem; }
+.collab-band p { color: rgba(255,255,255,.75); max-width: 46ch; margin-bottom: 1.75rem; }
+.collab-band__visual .ph { aspect-ratio: 4/3; border-radius: 2px; }
+@media (max-width: 860px) { .collab-band__inner { grid-template-columns: 1fr; } }
 
 /* --------------------------------------------------------------------------
    11. Bandeau intro — trois portes d'entrée en grand texte (style Polène)

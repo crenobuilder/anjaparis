@@ -1,46 +1,69 @@
-# Déposer les vrais assets Anja ici
+# Assets Anja Paris
 
-Chaque emplacement image du prototype est câblé sur un chemin précis ci-dessous.
-**Déposez un fichier portant exactement ce nom dans ce dossier : il remplace le
-placeholder automatiquement, sans toucher au code.**
+## État actuel
 
-## Logo
+Le logo et 24 photos réelles ont été fournis par le client et intégrés au
+prototype (voir la liste ci-dessous). **Il ne manque plus que les visuels de
+la collaboration Anja × Havaianas**, qui n'existent pas encore (le client les
+génère via ChatGPT).
+
+Chaque emplacement image du prototype est câblé sur un chemin précis :
+déposer un fichier portant exactement le nom attendu dans ce dossier le
+remplace automatiquement, sans toucher au code.
+
+## Encore en attente — collaboration Anja × Havaianas
+
 | Fichier attendu | Utilisation |
 |---|---|
-| *(texte pour l'instant)* | Le logo est actuellement le texte « ANJA PARIS » en composition typographique. Envoyez-moi le fichier réel (SVG ou PNG transparent) et je le remplace par le vrai logo. |
+| `hero-collab.jpg` | Visuel du bandeau collab sur la home (juste sous le hero) |
+| `collab-le-solaire.jpg` | Carrousel « Anja × Havaianas, la collection » — pièce 1 |
+| `collab-le-rio.jpg` | Carrousel collab — pièce 2 |
+| `collab-le-terracotta.jpg` | Carrousel collab — pièce 3 |
 
-## Hero — collaboration Anja × Havaianas
-| Fichier attendu | Ratio | Utilisation |
-|---|---|---|
-| `hero-collab.jpg` | Plein écran, sujet cadré à droite | Photo/visuel principal de la home |
-| `hero-collab-tag.jpg` | 1 / 1 | Vignette du produit dans le tag flottant sur le hero |
+`collab.html` (la page dédiée à la collaboration) reste également en
+dégradés placeholder sur toute sa partie visuelle : c'est un produit
+fictif, il n'existe intentionnellement aucune vraie photo à y mettre tant
+que la collab n'est pas réelle.
 
-## Carrousel — icônes du catalogue
-| Fichier attendu | Produit réel (nom vérifié) |
+## Déjà intégré — catalogue réel Anja
+
+| Fichier | Produit / usage |
 |---|---|
-| `product-le-plongeant.jpg` | Le Plongeant — une pièce, 125 € |
-| `product-le-plongeant-vichy.jpg` | Le Plongeant Vichy Marine |
-| `product-le-vertigineux.jpg` | Le Vertigineux — une pièce, Terracotta |
-| `product-deux-pieces.jpg` | Deux pièces (haut + bas) |
-| `product-nouveaute-1.jpg` | Nouveauté à définir |
-| `product-nouveaute-2.jpg` | Nouveauté à définir |
+| `logo.svg` | Logo réel, en SVG inline (`fill: currentColor` — s'adapte au fond clair/sombre) |
+| `le-plongeant-vichy-marine-lifestyle.webp` / `-packshot.webp` | Le Plongeant, vichy marine |
+| `le-plongeant-vichy-vert-studio.webp` / `-lifestyle.webp` / `-packshot.webp` | Le Plongeant, vichy vert |
+| `le-piccolo-lifestyle-dos.webp` / `-bras.webp` / `-packshot.webp` | Le Piccolo, aubergine et bleu |
+| `le-fidele-lifestyle.webp` / `-packshot.webp` | Le Fidèle, une pièce asymétrique violet |
+| `le-petillant-lifestyle-1.webp` / `-2.webp` / `-packshot.webp` | Le Pétillant, haut triangle bleu électrique |
+| `le-determine-lifestyle-piscine.webp` / `-dos.webp` / `-packshot.webp` | Le Déterminé, une pièce sportif chocolat |
+| `le-marin-lifestyle-duo.webp` / `le-marin-detail.webp` | Le Marin, deux pièces rayé marine |
+| `triangle-fluo-orange-1.webp` / `-2.webp` | Haut triangle fluo orange |
+| `le-confortable-lifestyle.webp` | Le Confortable — prêt-à-porter |
+| `ambiance-cabana.webp` | Photo d'ambiance (cabana piscine) — bloc savoir-faire |
+| `ambiance-nautique.jpg` | Photo d'ambiance (coussins rayés bateau) — disponible, pas encore utilisée |
+| `illustration-palmier.webp` | Illustration dessinée à la main (palmiers) — disponible, pas encore utilisée |
 
-Ratio recommandé : 3 / 4 (portrait), comme les sacs sur le site Polène.
+**Important — noms de produits et prix** : les noms (Le Plongeant, Le Piccolo,
+Le Fidèle, Le Pétillant, Le Déterminé, Le Marin, Le Confortable) viennent des
+noms de fichiers fournis par le client — fiables, mais à faire valider. **Les
+prix affichés sont illustratifs** : je n'ai qu'une seule donnée de prix
+vérifiée par recherche externe (~125 € pour un une-pièce plein tarif). Tous
+les autres montants sont des estimations à corriger avec les vrais tarifs
+avant toute présentation client finale.
 
-## Savoir-faire
-| Fichier attendu | Utilisation |
+## Police
+
+Work Sans installée (Archivo chargée en alternative). Si ce n'est ni l'une
+ni l'autre, indiquer le nom exact (clic droit sur un titre du vrai site →
+Inspecter → `font-family` dans le panneau de styles).
+
+## Ratios de référence
+
+| Emplacement | Ratio |
 |---|---|
-| `atelier-1.jpg` | Atelier / mains sur la matière |
-| `atelier-2.jpg` | Détail tissu ou geste de confection |
-
-## Communauté
-| Fichier attendu |
-|---|
-| `community-1.jpg` … `community-6.jpg` |
-
----
-
-**Pour la police** : dans Chrome/Safari, clic droit sur un titre du site → *Inspecter*
-→ dans le panneau de styles, cherchez `font-family`. Envoyez-moi le nom exact
-(ex. « Canela », « GT Sectra », « Times Now »…) et je l'installe si elle est
-disponible en web font, ou je choisis l'équivalent libre le plus proche.
+| Hero | Plein écran, sujet cadré |
+| Tag produit flottant (hero) | 4 / 5 |
+| Tuiles catégories | 3 / 4 |
+| Cartes carrousel | 3 / 4 (packshot recommandé pour la cohérence visuelle) |
+| Bloc éditorial plein écran | Libre, occupe 50 % de largeur |
+| Grille lookbook | 1 / 1 |
