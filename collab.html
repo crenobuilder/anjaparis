@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/collab.css">
 </head>
@@ -18,7 +18,7 @@
 
 <div class="announce">
   <div class="announce__track">
-    <p class="announce__item is-active">Anja × Havaianas — série limitée, à partir du 4 juin 2027</p>
+    <p class="announce__item is-active">Anja × Havaianas — série limitée, à partir du 4 juin</p>
     <p class="announce__item">Accès anticipé 48 h pour les inscrites à la newsletter</p>
     <p class="announce__item">Livraison offerte dès 120 € · Retours gratuits 30 jours</p>
   </div>
@@ -28,36 +28,48 @@
   <div class="header__inner">
     <div class="header__nav-slot">
       <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
-      <nav class="nav" aria-label="Navigation principale">
-        <a class="nav__link" href="index.html#spotlight">Maillots</a>
-        <a class="nav__link" href="index.html#spotlight">Beachwear</a>
-        <a class="nav__link nav__link--accent" href="collab.html">Anja × Havaianas</a>
-        <a class="nav__link" href="index.html#craft">La Maison</a>
+      <nav class="nav nav--left" aria-label="Navigation boutique">
+        <a class="nav__link" href="index.html#icons">One Piece</a>
+        <a class="nav__link" href="index.html#icons">Two Pieces</a>
+        <a class="nav__link" href="index.html#collab-icons">New Arrivals</a>
+        <a class="nav__link" href="index.html#editorial">Ready-to-Wear</a>
       </nav>
     </div>
 
     <a class="logo" href="index.html">Anja Paris</a>
 
-    <div class="header__actions">
-      <button class="icon-btn" aria-label="Rechercher">
-        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-      </button>
-      <button class="icon-btn" aria-label="Mon compte">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
-      </button>
-      <button class="icon-btn" aria-label="Panier">
-        <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
-        <span class="cart-count">0</span>
-      </button>
+    <div class="header__nav-slot" style="justify-self:end">
+      <nav class="nav nav--right" aria-label="Navigation maison">
+        <a class="nav__link" href="#">Stores</a>
+        <a class="nav__link" href="index.html#editorial">The Brand</a>
+        <a class="nav__link" href="collab.html" aria-current="page">Lookbook</a>
+      </nav>
+      <div class="header__actions">
+        <span class="util-link">FR</span>
+        <button class="icon-btn" aria-label="Rechercher">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Liste d'envies">
+          <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C.8 8 2 4.5 5.5 4c2-.3 3.7.6 4.5 2 .8-1.4 2.5-2.3 4.5-2C18 4.5 19.2 8 21.5 11.5 19 15.65 12 20 12 20z"/></svg>
+          <span class="count wish-count">0</span>
+        </button>
+        <button class="icon-btn" aria-label="Panier">
+          <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="count cart-count">0</span>
+        </button>
+      </div>
     </div>
   </div>
 </header>
 
 <nav class="drawer" aria-label="Navigation mobile">
-  <a href="index.html#spotlight">Maillots</a>
-  <a href="index.html#spotlight">Beachwear</a>
-  <a href="collab.html">Anja × Havaianas</a>
-  <a href="index.html#craft">La Maison</a>
+  <a href="index.html#icons">One Piece</a>
+  <a href="index.html#icons">Two Pieces</a>
+  <a href="index.html#collab-icons">New Arrivals</a>
+  <a href="index.html#editorial">Ready-to-Wear</a>
+  <a href="#">Stores</a>
+  <a href="index.html#editorial">The Brand</a>
+  <a href="collab.html">Lookbook</a>
   <a href="index.html">Retour à l'accueil</a>
 </nav>
 
@@ -90,10 +102,10 @@
     </div>
 
     <div class="chero__strip">
-      <div class="ph ph--sun"><span class="ph__tag">Photo · maillot jaune soleil, plein cadre</span></div>
-      <div class="ph ph--vert"><span class="ph__tag">Photo · tongs à plat sur le sable</span></div>
-      <div class="ph ph--terra"><span class="ph__tag">Photo · duo modèles, marche sur la plage</span></div>
-      <div class="ph ph--sea"><span class="ph__tag">Photo · détail imprimé, macro tissu</span></div>
+      <div class="ph ph--sun"><span class="ph__flag">Photo · maillot jaune soleil, plein cadre</span></div>
+      <div class="ph ph--vert"><span class="ph__flag">Photo · tongs à plat sur le sable</span></div>
+      <div class="ph ph--terra"><span class="ph__flag">Photo · duo modèles, marche sur la plage</span></div>
+      <div class="ph ph--sea"><span class="ph__flag">Photo · détail imprimé, macro tissu</span></div>
     </div>
   </div>
 </section>
@@ -160,8 +172,8 @@
 
       <article class="duo__card" data-reveal>
         <div class="duo__stack">
-          <div class="ph ph--sun"><span class="ph__tag">Photo · maillot une pièce</span></div>
-          <div class="ph ph--vert"><span class="ph__tag">Tong</span></div>
+          <div class="ph ph--sun"><span class="ph__flag">Photo · maillot une pièce</span></div>
+          <div class="ph ph--vert"><span class="ph__flag">Tong</span></div>
         </div>
         <div class="duo__body">
           <h3>Le Solaire</h3>
@@ -180,8 +192,8 @@
 
       <article class="duo__card" data-reveal data-delay="1">
         <div class="duo__stack">
-          <div class="ph ph--vert"><span class="ph__tag">Photo · deux pièces</span></div>
-          <div class="ph ph--sun"><span class="ph__tag">Tong</span></div>
+          <div class="ph ph--vert"><span class="ph__flag">Photo · deux pièces</span></div>
+          <div class="ph ph--sun"><span class="ph__flag">Tong</span></div>
         </div>
         <div class="duo__body">
           <h3>Le Rio</h3>
@@ -201,8 +213,8 @@
 
       <article class="duo__card" data-reveal data-delay="2">
         <div class="duo__stack">
-          <div class="ph ph--terra"><span class="ph__tag">Photo · maillot une pièce</span></div>
-          <div class="ph ph--sable"><span class="ph__tag">Tong</span></div>
+          <div class="ph ph--terra"><span class="ph__flag">Photo · maillot une pièce</span></div>
+          <div class="ph ph--sable"><span class="ph__flag">Tong</span></div>
         </div>
         <div class="duo__body">
           <h3>Le Terracotta</h3>
@@ -244,7 +256,7 @@
       </div>
 
       <div class="print__media" data-reveal data-delay="1">
-        <div class="ph ph--sun"><span class="ph__tag">Visuel · planche d'imprimé, motif en répétition</span></div>
+        <div class="ph ph--sun"><span class="ph__flag">Visuel · planche d'imprimé, motif en répétition</span></div>
       </div>
     </div>
   </div>

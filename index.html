@@ -3,32 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ANJA PARIS — Maillots de bain solaires, dessinés à Paris</title>
-<meta name="description" content="Maillots de bain et beachwear dessinés à Paris, confectionnés au Portugal. Tissus européens certifiés OEKO-TEX, du bonnet A au bonnet E.">
+<title>ANJA PARIS — Maillots de bain dessinés à Paris</title>
+<meta name="description" content="Maillots de bain et beachwear dessinés à Paris, confectionnés au Portugal. Édition limitée Anja × Havaianas.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 <a class="skip-link" href="#main">Aller au contenu</a>
 
+<div class="note note--tl" data-n="0" style="position:fixed;max-width:320px">Structure et micro-animations calquées sur polene-paris.com (captures fournies). La DA (couleurs/police/photos) est un socle neutre : les vrais assets Anja n'ont pas pu être récupérés automatiquement — accès réseau sortant bloqué dans cet environnement. Détail : assets/images/README.md.</div>
+
 <!-- ===================================================================
-     Barre d'annonce — réassurance en rotation.
-     Remplace le bandeau « −60 % » permanent (audit C2).
+     Barre d'annonce
      =================================================================== -->
 <div class="announce">
   <div class="announce__track">
-    <p class="announce__item is-active">Livraison offerte dès 120 € · Retours gratuits sous 30 jours</p>
+    <p class="announce__item is-active">Anja × Havaianas — édition limitée, dès le 4 juin</p>
+    <p class="announce__item">Livraison offerte dès 120 € · Retours gratuits sous 30 jours</p>
     <p class="announce__item">Dessiné à Paris · Confectionné au Portugal</p>
-    <p class="announce__item">Du bonnet A au bonnet E — enfin.</p>
   </div>
 </div>
 
 <!-- ===================================================================
-     Header
+     Header — logo centré, nav gauche/droite (structure Polène)
      =================================================================== -->
 <header class="header">
   <div class="header__inner">
@@ -36,128 +37,73 @@
     <div class="header__nav-slot">
       <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
 
-      <nav class="nav" aria-label="Navigation principale">
-
+      <nav class="nav nav--left" aria-label="Navigation boutique">
         <div class="nav__item nav__item--has-mega">
-          <a class="nav__link" href="#" aria-expanded="false">Maillots</a>
-
-          <!-- Méga-menu illustré — le parti pris repris de Sézane (audit C5) -->
-          <div class="mega">
-            <div class="mega__inner">
-              <div class="mega__col">
-                <p class="mega__title">Par forme</p>
-                <ul class="mega__list">
-                  <li><a href="#">Une pièce</a></li>
-                  <li><a href="#">Deux pièces</a></li>
-                  <li><a href="#">Hauts</a></li>
-                  <li><a href="#">Bas</a></li>
-                  <li><a href="#">Ensembles</a></li>
-                </ul>
-              </div>
-              <div class="mega__col">
-                <p class="mega__title">Par bonnet</p>
-                <ul class="mega__list">
-                  <li><a href="#">Bonnet A – B</a></li>
-                  <li><a href="#">Bonnet C – D</a></li>
-                  <li><a href="#">Bonnet E et +</a></li>
-                  <li><a href="#">Maintien renforcé</a></li>
-                  <li><a href="#">Guide des tailles</a></li>
-                </ul>
-              </div>
-              <div class="mega__col">
-                <p class="mega__title">Par envie</p>
-                <ul class="mega__list">
-                  <li><a href="#">Les unis</a></li>
-                  <li><a href="#">Les imprimés</a></li>
-                  <li><a href="#">Le vichy</a></li>
-                  <li><a href="#">Les iconiques</a></li>
-                  <li><a href="#">Nouveautés</a></li>
-                </ul>
-              </div>
-
-              <div class="mega__feature">
-                <a class="mega__card" href="#spotlight">
-                  <div class="ph ph--rouge"><span class="ph__tag">Photo · Le Plongeant, plan taille</span></div>
-                  <div class="mega__caption">
-                    <strong>Le Plongeant</strong>
-                    <span>L'iconique, en 6 couleurs</span>
-                  </div>
-                </a>
-              </div>
-              <div class="mega__feature">
-                <a class="mega__card" href="collab.html">
-                  <div class="ph ph--sun"><span class="ph__tag">Photo · Collab, plage au couchant</span></div>
-                  <div class="mega__caption">
-                    <strong>Anja × Havaianas</strong>
-                    <span>Édition limitée — juin 2027</span>
-                  </div>
-                </a>
-              </div>
+          <a class="nav__link" href="#" aria-expanded="false">One Piece</a>
+          <div class="mega" aria-hidden="true">
+            <div class="mega__stack">
+              <a href="#icons" class="is-current">One Piece</a>
+              <a href="#icons">Two Pieces</a>
+              <a href="#editorial">Ready-to-Wear</a>
+              <a href="#">Accessories</a>
+              <p class="mega__note">Livraison offerte dès 120 € — Retours sous 30 jours</p>
             </div>
           </div>
         </div>
 
         <div class="nav__item nav__item--has-mega">
-          <a class="nav__link" href="#" aria-expanded="false">Beachwear</a>
-          <div class="mega">
-            <div class="mega__inner">
-              <div class="mega__col">
-                <p class="mega__title">Prêt-à-porter</p>
-                <ul class="mega__list">
-                  <li><a href="#">Robes</a></li>
-                  <li><a href="#">Blouses</a></li>
-                  <li><a href="#">Jupes</a></li>
-                  <li><a href="#">Pantalons fluides</a></li>
-                </ul>
-              </div>
-              <div class="mega__col">
-                <p class="mega__title">Accessoires</p>
-                <ul class="mega__list">
-                  <li><a href="#">Paréos &amp; foutas</a></li>
-                  <li><a href="#">Cabas</a></li>
-                  <li><a href="#">Chapeaux &amp; casquettes</a></li>
-                  <li><a href="#">Parfums</a></li>
-                </ul>
-              </div>
-              <div class="mega__col">
-                <p class="mega__title">Silhouettes</p>
-                <ul class="mega__list">
-                  <li><a href="#">Le look plage</a></li>
-                  <li><a href="#">Du bain au déjeuner</a></li>
-                  <li><a href="#">La valise d'été</a></li>
-                </ul>
-              </div>
-              <div class="mega__feature">
-                <a class="mega__card" href="#">
-                  <div class="ph ph--sable"><span class="ph__tag">Photo · Robe longue, lumière rasante</span></div>
-                  <div class="mega__caption">
-                    <strong>La valise d'été</strong>
-                    <span>12 pièces, une seule valise</span>
-                  </div>
-                </a>
-              </div>
+          <a class="nav__link" href="#" aria-expanded="false">Two Pieces</a>
+          <div class="mega" aria-hidden="true">
+            <div class="mega__stack">
+              <a href="#icons">One Piece</a>
+              <a href="#icons" class="is-current">Two Pieces</a>
+              <a href="#editorial">Ready-to-Wear</a>
+              <a href="#">Accessories</a>
+              <p class="mega__note">Livraison offerte dès 120 € — Retours sous 30 jours</p>
             </div>
           </div>
         </div>
 
-        <a class="nav__link nav__link--accent" href="collab.html">Anja × Havaianas</a>
-        <a class="nav__link" href="#craft">La Maison</a>
+        <a class="nav__link" href="#collab-icons">New Arrivals</a>
+
+        <div class="nav__item nav__item--has-mega">
+          <a class="nav__link" href="#" aria-expanded="false">Ready-to-Wear</a>
+          <div class="mega" aria-hidden="true">
+            <div class="mega__stack">
+              <a href="#icons">One Piece</a>
+              <a href="#icons">Two Pieces</a>
+              <a href="#editorial" class="is-current">Ready-to-Wear</a>
+              <a href="#">Accessories</a>
+              <p class="mega__note">Livraison offerte dès 120 € — Retours sous 30 jours</p>
+            </div>
+          </div>
+        </div>
       </nav>
     </div>
 
     <a class="logo" href="index.html">Anja Paris</a>
 
-    <div class="header__actions">
-      <button class="icon-btn" aria-label="Rechercher">
-        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-      </button>
-      <button class="icon-btn" aria-label="Mon compte">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
-      </button>
-      <button class="icon-btn" aria-label="Panier">
-        <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
-        <span class="cart-count">0</span>
-      </button>
+    <div class="header__nav-slot" style="justify-self:end">
+      <nav class="nav nav--right" aria-label="Navigation maison">
+        <a class="nav__link" href="#">Stores</a>
+        <a class="nav__link" href="#editorial">The Brand</a>
+        <a class="nav__link" href="collab.html">Lookbook</a>
+      </nav>
+
+      <div class="header__actions">
+        <span class="util-link">FR</span>
+        <button class="icon-btn" aria-label="Rechercher">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Liste d'envies">
+          <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C.8 8 2 4.5 5.5 4c2-.3 3.7.6 4.5 2 .8-1.4 2.5-2.3 4.5-2C18 4.5 19.2 8 21.5 11.5 19 15.65 12 20 12 20z"/></svg>
+          <span class="count wish-count">0</span>
+        </button>
+        <button class="icon-btn" aria-label="Panier">
+          <svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="count cart-count">0</span>
+        </button>
+      </div>
     </div>
 
   </div>
@@ -165,12 +111,13 @@
 
 <!-- Menu mobile -->
 <nav class="drawer" aria-label="Navigation mobile">
-  <a href="#">Maillots</a>
-  <a href="#">Beachwear</a>
-  <a href="#">Accessoires</a>
-  <a href="collab.html">Anja × Havaianas</a>
-  <a href="#craft">La Maison</a>
-  <a href="#finder">Trouver mon maillot</a>
+  <a href="#icons">One Piece</a>
+  <a href="#icons">Two Pieces</a>
+  <a href="#collab-icons">New Arrivals</a>
+  <a href="#editorial">Ready-to-Wear</a>
+  <a href="#">Stores</a>
+  <a href="#editorial">The Brand</a>
+  <a href="collab.html">Lookbook</a>
   <div class="drawer__meta">
     <span>Livraison offerte dès 120 €</span>
     <span>Retours gratuits sous 30 jours</span>
@@ -181,419 +128,307 @@
 <main id="main">
 
 <!-- ===================================================================
-     Hero
+     Hero — la home S'OUVRE sur la collaboration Anja × Havaianas
+     Mécanique reprise de Polène : photo plein écran + carte produit
+     flottante en bas à gauche (miniature + nom + prix), header overlaid.
      =================================================================== -->
 <section class="hero">
   <div class="hero__media">
-    <div class="ph ph--sun"><span class="ph__tag">Vidéo 8 s en boucle · plan large, mer au petit matin</span></div>
+    <div class="ph" style="--c1:#E9DDC4; --c2:#C9A876">
+      <img data-fallback src="assets/images/hero-collab.jpg" alt="Collaboration Anja Paris × Havaianas">
+      <span class="ph__flag"><i></i>Emplacement : assets/images/hero-collab.jpg — votre visuel de collab</span>
+    </div>
   </div>
   <div class="hero__scrim"></div>
 
-  <div class="note note--br" data-n="1">Un seul message, une seule action. Le hero actuel empile les collections ; ici on installe la marque avant de vendre.</div>
+  <span class="hero__badge"><i></i>Édition limitée · Anja × Havaianas</span>
 
-  <div class="hero__inner">
-    <div>
-      <p class="eyebrow" style="color: rgba(255,253,248,.7)">Collection Été 2027</p>
-      <h1 class="hero__title">Le maillot qu'on garde <em>dix étés</em>.</h1>
-      <p class="hero__sub">Dessiné à Paris, confectionné au Portugal, en tissus européens certifiés OEKO-TEX. Du bonnet A au bonnet E.</p>
-      <div class="hero__cta">
-        <a class="btn btn--light" href="#spotlight">Découvrir la collection</a>
-        <a class="btn btn--outline-light" href="#finder">Trouver mon maillot</a>
-      </div>
+  <div class="hero__tag">
+    <div class="ph" style="--c1:#E3A244; --c2:#00884A">
+      <img data-fallback src="assets/images/hero-collab-tag.jpg" alt="Le Solaire, Anja × Havaianas">
+      <span class="ph__flag"><i></i>assets/images/hero-collab-tag.jpg</span>
     </div>
+    <div class="hero__tag__body">
+      <strong>Le Solaire</strong>
+      <span>Anja × Havaianas — dès 145 €</span>
+    </div>
+  </div>
 
-    <div class="hero__scroll" aria-hidden="true">
-      <span class="hero__scroll-line"></span>
-      <span>Scroll</span>
-    </div>
+  <div class="hero__inner" style="justify-content:flex-end; align-items:flex-end; padding-bottom:clamp(1.5rem,4vw,3rem)">
+    <a class="link-u" style="color:var(--paper)" href="collab.html">Découvrir la collaboration →</a>
   </div>
 </section>
 
 <!-- ===================================================================
-     Collaboration — le pic d'attention de la home (étape 3)
+     Trois portes d'entrée
      =================================================================== -->
-<section class="collab-band" id="collab">
-  <div class="note note--tl" data-n="2">La collab est placée juste après le hero : c'est l'événement de la saison, il doit être vu avant le catalogue.</div>
-
-  <div class="collab-band__inner">
-    <div data-reveal>
-      <span class="collab-band__badge"><i></i> Édition limitée · Juin 2027</span>
-
-      <div class="collab-lockup">
-        <span>Anja</span>
-        <span class="x">×</span>
-        <span>Havaianas</span>
-      </div>
-
-      <p>Paris rencontre Rio. Six maillots solaires et deux tongs dessinées ensemble — mêmes imprimés, mêmes couleurs, un seul vestiaire de plage. Fabriqué au Portugal et au Brésil, en série limitée.</p>
-
-      <a class="btn btn--light" href="collab.html">Voir la collaboration</a>
-    </div>
-
-    <div class="collab-band__visual" data-reveal data-delay="2">
-      <div class="ph ph--vert"><span class="ph__tag">Photo · maillot + tong, à plat, sable</span></div>
-      <div class="ph ph--sun"><span class="ph__tag">Photo · duo modèles, contre-jour</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================================================================
-     Catégories
-     =================================================================== -->
-<section class="section wrap">
+<section class="section wrap" id="icons">
   <div class="section-head section-head--split" data-reveal>
     <div>
-      <p class="eyebrow">L'essentiel</p>
-      <h2>Trois portes d'entrée, pas quinze.</h2>
+      <p class="eyebrow">La collection</p>
+      <h2>Une pièce, deux pièces, prêt-à-porter.</h2>
     </div>
     <a class="link-u" href="#">Tout voir</a>
   </div>
 
   <div class="cats">
     <a class="cat" href="#" data-reveal>
-      <div class="ph ph--marine"><span class="ph__tag">Photo · une pièce, vue dos</span></div>
-      <div class="cat__body"><h3>Les maillots</h3><span>Une pièce, deux pièces, bonnets A à E</span></div>
+      <div class="ph" style="--c1:#DCE3E6; --c2:#3E5A66">
+        <img data-fallback src="assets/images/product-le-plongeant.jpg" alt="Le Plongeant">
+        <span class="ph__flag"><i></i>product-le-plongeant.jpg</span>
+      </div>
+      <div class="cat__body"><h3>One Piece</h3><span>Dès 125 €</span></div>
     </a>
     <a class="cat" href="#" data-reveal data-delay="1">
-      <div class="ph ph--sable"><span class="ph__tag">Photo · robe fluide en mouvement</span></div>
-      <div class="cat__body"><h3>Le beachwear</h3><span>Robes, blouses, paréos, pantalons</span></div>
-    </a>
-    <a class="cat" href="#" data-reveal data-delay="2">
-      <div class="ph ph--terra"><span class="ph__tag">Photo · nature morte accessoires</span></div>
-      <div class="cat__body"><h3>Les accessoires</h3><span>Foutas, cabas, chapeaux, parfums</span></div>
-    </a>
-  </div>
-</section>
-
-<!-- ===================================================================
-     Spotlight — produits mis en avant au scroll
-     La section fait 4 × 100vh ; le visuel reste collé et change
-     au fil de la descente.
-     =================================================================== -->
-<section class="spotlight" id="spotlight" data-spotlight style="--steps: 4">
-  <div class="spotlight__stage">
-    <div class="note note--tr" data-n="3">Le cœur de la demande : un produit à la fois, plein écran, révélé au scroll. On passe de la grille de stock à la mise en scène.</div>
-
-
-    <div class="spotlight__media">
-      <div class="spotlight__shot is-active"><div class="ph ph--rouge"><span class="ph__tag">Photo · Le Plongeant Rouge, plein cadre</span></div></div>
-      <div class="spotlight__shot"><div class="ph ph--terra"><span class="ph__tag">Photo · Le Vertigineux Terracotta</span></div></div>
-      <div class="spotlight__shot"><div class="ph ph--marine"><span class="ph__tag">Photo · Le Plongeant Vichy Marine</span></div></div>
-      <div class="spotlight__shot"><div class="ph ph--sun"><span class="ph__tag">Photo · Le Solaire, collab Havaianas</span></div></div>
-    </div>
-
-    <div class="spotlight__panel">
-
-      <article class="spotlight__item is-active" style="--m1:#D4795F; --m2:#8E241F">
-        <p class="spotlight__idx">01 — L'iconique</p>
-        <h3>Le Plongeant</h3>
-        <p class="spotlight__price">125 €</p>
-        <p>Le décolleté plongeant qui a lancé la maison en 2017. Dos nageur, bretelles réglables, doublure intégrale. Celui qu'on rachète dans une autre couleur.</p>
-        <ul class="specs">
-          <li>Bonnet A – E</li>
-          <li>Doublé</li>
-          <li>Anti-chlore</li>
-          <li>Portugal</li>
-        </ul>
-        <div class="swatches" data-swatches aria-label="Couleurs disponibles">
-          <button class="swatch" style="background:#B6362E" aria-pressed="true" aria-label="Rouge"></button>
-          <button class="swatch" style="background:#1E3A5C" aria-pressed="false" aria-label="Marine"></button>
-          <button class="swatch" style="background:#E7D5B8" aria-pressed="false" aria-label="Sable"></button>
-          <button class="swatch" style="background:#16150F" aria-pressed="false" aria-label="Noir"></button>
-        </div>
-        <a class="btn btn--solid" href="#" data-add>Ajouter au panier</a>
-      </article>
-
-      <article class="spotlight__item" style="--m1:#E0A184; --m2:#A44E2B">
-        <p class="spotlight__idx">02 — Le décolleté</p>
-        <h3>Le Vertigineux</h3>
-        <p class="spotlight__price">135 €</p>
-        <p>Dos ouvert, échancrure haute, maintien réel. Pensé pour celles qui veulent l'allure sans renoncer à nager vraiment.</p>
-        <ul class="specs">
-          <li>Bonnet A – D</li>
-          <li>Maintien renforcé</li>
-          <li>Tissu italien</li>
-          <li>OEKO-TEX</li>
-        </ul>
-        <div class="swatches" data-swatches aria-label="Couleurs disponibles">
-          <button class="swatch" style="background:#C2643C" aria-pressed="true" aria-label="Terracotta"></button>
-          <button class="swatch" style="background:#5B8C93" aria-pressed="false" aria-label="Lagon"></button>
-          <button class="swatch" style="background:#E3A244" aria-pressed="false" aria-label="Soleil"></button>
-        </div>
-        <a class="btn btn--solid" href="#" data-add>Ajouter au panier</a>
-      </article>
-
-      <article class="spotlight__item" style="--m1:#4A6E93; --m2:#16294A">
-        <p class="spotlight__idx">03 — L'imprimé</p>
-        <h3>Le Plongeant Vichy</h3>
-        <p class="spotlight__price">125 €</p>
-        <p>Le vichy marine, tissé et non imprimé — il ne passe pas au soleil. La coupe iconique, dans le motif le plus français qui soit.</p>
-        <ul class="specs">
-          <li>Bonnet A – E</li>
-          <li>Vichy tissé</li>
-          <li>Doublé</li>
-          <li>Série limitée</li>
-        </ul>
-        <div class="swatches" data-swatches aria-label="Couleurs disponibles">
-          <button class="swatch" style="background:#1E3A5C" aria-pressed="true" aria-label="Vichy marine"></button>
-          <button class="swatch" style="background:#B6362E" aria-pressed="false" aria-label="Vichy rouge"></button>
-        </div>
-        <a class="btn btn--solid" href="#" data-add>Ajouter au panier</a>
-      </article>
-
-      <article class="spotlight__item" style="--m1:#F0C98A; --m2:#00884A">
-        <p class="spotlight__idx">04 — La collaboration</p>
-        <h3>Le Solaire</h3>
-        <p class="spotlight__price">145 € <span style="font-family:var(--font-text);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute)">· ou 185 € avec les tongs</span></p>
-        <p>Anja × Havaianas. L'imprimé dessiné à quatre mains se porte sur le maillot et sur la tong. Vendu séparément ou en duo, en série limitée.</p>
-        <ul class="specs">
-          <li>Bonnet A – D</li>
-          <li>Édition limitée</li>
-          <li>Duo maillot + tong</li>
-          <li>Juin 2027</li>
-        </ul>
-        <div class="swatches" data-swatches aria-label="Couleurs disponibles">
-          <button class="swatch" style="background:#E3A244" aria-pressed="true" aria-label="Soleil"></button>
-          <button class="swatch" style="background:#00884A" aria-pressed="false" aria-label="Vert Rio"></button>
-          <button class="swatch" style="background:#C2643C" aria-pressed="false" aria-label="Terracotta"></button>
-        </div>
-        <a class="btn btn--solid" href="collab.html">Voir la collaboration</a>
-      </article>
-
-      <div class="spotlight__progress" aria-hidden="true">
-        <span class="spotlight__dot is-active"></span>
-        <span class="spotlight__dot"></span>
-        <span class="spotlight__dot"></span>
-        <span class="spotlight__dot"></span>
+      <div class="ph" style="--c1:#E9DDC4; --c2:#B49563">
+        <img data-fallback src="assets/images/product-deux-pieces.jpg" alt="Deux pièces">
+        <span class="ph__flag"><i></i>product-deux-pieces.jpg</span>
       </div>
-
-    </div>
+      <div class="cat__body"><h3>Two Pieces</h3><span>Dès 85 €</span></div>
+    </a>
+    <a class="cat" href="#editorial" data-reveal data-delay="2">
+      <div class="ph" style="--c1:#E4DCD0; --c2:#8B7C68">
+        <img data-fallback src="assets/images/product-nouveaute-1.jpg" alt="Ready-to-Wear">
+        <span class="ph__flag"><i></i>product-nouveaute-1.jpg</span>
+      </div>
+      <div class="cat__body"><h3>Ready-to-Wear</h3><span>Robes, blouses, paréos</span></div>
+    </a>
   </div>
 </section>
 
 <!-- ===================================================================
-     Les icônes — carrousel
+     Carrousel — les icônes du catalogue
+     Mécanique Polène : grande photo portrait, légende minimale,
+     défilement au drag + flèches.
      =================================================================== -->
-<section class="section wrap">
+<section class="section wrap" data-rail>
   <div class="section-head section-head--split" data-reveal>
     <div>
       <p class="eyebrow">Les icônes</p>
       <h2>Ce que nos clientes rachètent.</h2>
     </div>
-    <a class="link-u" href="#">Voir les 24 modèles</a>
+    <div class="rail__nav">
+      <button class="rail__btn" data-rail-prev aria-label="Précédent"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="rail__btn" data-rail-next aria-label="Suivant"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
   </div>
 
-  <div class="rail" data-reveal>
+  <div class="rail-wrap">
+    <div class="rail" data-reveal>
 
-    <article class="card">
-      <div class="card__media">
-        <span class="card__flag">Best-seller</span>
-        <div class="ph ph--rouge"><span class="ph__tag">Photo produit · fond neutre</span></div>
-        <button class="card__quick" data-add>Ajout rapide</button>
-      </div>
-      <div class="card__body">
-        <div><h3>Le Plongeant</h3><p>Rouge · Bonnet A–E</p></div>
-        <span class="card__price">125 €</span>
-      </div>
-    </article>
+      <article class="card">
+        <div class="card__media">
+          <span class="card__badge">Best-seller</span>
+          <button class="card__wish" aria-label="Ajouter à la liste d'envies"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C.8 8 2 4.5 5.5 4c2-.3 3.7.6 4.5 2 .8-1.4 2.5-2.3 4.5-2C18 4.5 19.2 8 21.5 11.5 19 15.65 12 20 12 20z"/></svg></button>
+          <div class="ph" style="--c1:#DCE3E6; --c2:#3E5A66">
+            <img data-fallback src="assets/images/product-le-plongeant.jpg" alt="Le Plongeant">
+            <span class="ph__flag"><i></i>product-le-plongeant.jpg</span>
+          </div>
+          <button class="card__quick" data-add>Ajout rapide</button>
+        </div>
+        <div class="card__body">
+          <div><h3>Le Plongeant</h3><p>One piece · plusieurs coloris</p></div>
+          <span class="card__price">125 €</span>
+        </div>
+      </article>
 
-    <article class="card">
-      <div class="card__media">
-        <span class="card__flag card__flag--collab">Collab</span>
-        <div class="ph ph--sun"><span class="ph__tag">Photo produit · duo maillot + tong</span></div>
-        <button class="card__quick" data-add>Ajout rapide</button>
-      </div>
-      <div class="card__body">
-        <div><h3>Le Solaire</h3><p>Anja × Havaianas</p></div>
-        <span class="card__price">145 €</span>
-      </div>
-    </article>
+      <article class="card">
+        <div class="card__media">
+          <span class="card__badge card__badge--collab">Collab</span>
+          <button class="card__wish" aria-label="Ajouter à la liste d'envies"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C.8 8 2 4.5 5.5 4c2-.3 3.7.6 4.5 2 .8-1.4 2.5-2.3 4.5-2C18 4.5 19.2 8 21.5 11.5 19 15.65 12 20 12 20z"/></svg></button>
+          <div class="ph" style="--c1:#E3A244; --c2:#00884A">
+            <img data-fallback src="assets/images/hero-collab-tag.jpg" alt="Le Solaire, Anja × Havaianas">
+            <span class="ph__flag"><i></i>hero-collab-tag.jpg</span>
+          </div>
+          <button class="card__quick" data-add>Ajout rapide</button>
+        </div>
+        <div class="card__body">
+          <div><h3>Le Solaire</h3><p>Anja × Havaianas</p></div>
+          <span class="card__price">145 €</span>
+        </div>
+      </article>
 
-    <article class="card">
-      <div class="card__media">
-        <div class="ph ph--terra"><span class="ph__tag">Photo produit · fond neutre</span></div>
-        <button class="card__quick" data-add>Ajout rapide</button>
-      </div>
-      <div class="card__body">
-        <div><h3>Le Vertigineux</h3><p>Terracotta · Bonnet A–D</p></div>
-        <span class="card__price">135 €</span>
-      </div>
-    </article>
+      <article class="card">
+        <div class="card__media">
+          <button class="card__wish" aria-label="Ajouter à la liste d'envies"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C.8 8 2 4.5 5.5 4c2-.3 3.7.6 4.5 2 .8-1.4 2.5-2.3 4.5-2C18 4.5 19.2 8 21.5 11.5 19 15.65 12 20 12 20z"/></svg></button>
+          <div class="ph" style="--c1:#E0A184; --c2:#A44E2B">
+            <img data-fallback src="assets/images/product-le-vertigineux.jpg" alt="Le Vertigineux">
+            <span class="ph__flag"><i></i>product-le-vertigineux.jpg</span>
+          </div>
+          <button class="card__quick" data-add>Ajout rapide</button>
+        </div>
+        <div class="card__body">
+          <div><h3>Le Vertigineux</h3><p>One piece · Terracotta</p></div>
+          <span class="card__price">135 €</span>
+        </div>
+      </article>
 
-    <article class="card">
-      <div class="card__media">
-        <span class="card__flag">Nouveau</span>
-        <div class="ph ph--marine"><span class="ph__tag">Photo produit · fond neutre</span></div>
-        <button class="card__quick" data-add>Ajout rapide</button>
-      </div>
-      <div class="card__body">
-        <div><h3>Le Plongeant Vichy</h3><p>Marine · Bonnet A–E</p></div>
-        <span class="card__price">125 €</span>
-      </div>
-    </article>
+      <article class="card">
+        <div class="card__media">
+          <span class="card__badge">Nouveau</span>
+          <button class="card__wish" aria-label="Ajouter à la liste d'envies"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C.8 8 2 4.5 5.5 4c2-.3 3.7.6 4.5 2 .8-1.4 2.5-2.3 4.5-2C18 4.5 19.2 8 21.5 11.5 19 15.65 12 20 12 20z"/></svg></button>
+          <div class="ph" style="--c1:#4A6E93; --c2:#16294A">
+            <img data-fallback src="assets/images/product-le-plongeant-vichy.jpg" alt="Le Plongeant Vichy">
+            <span class="ph__flag"><i></i>product-le-plongeant-vichy.jpg</span>
+          </div>
+          <button class="card__quick" data-add>Ajout rapide</button>
+        </div>
+        <div class="card__body">
+          <div><h3>Le Plongeant Vichy</h3><p>One piece · Marine</p></div>
+          <span class="card__price">125 €</span>
+        </div>
+      </article>
 
-    <article class="card">
-      <div class="card__media">
-        <div class="ph ph--sable"><span class="ph__tag">Photo produit · fond neutre</span></div>
-        <button class="card__quick" data-add>Ajout rapide</button>
-      </div>
-      <div class="card__body">
-        <div><h3>La Robe Longue</h3><p>Sable · 36 – 44</p></div>
-        <span class="card__price">165 €</span>
-      </div>
-    </article>
+      <article class="card">
+        <div class="card__media">
+          <button class="card__wish" aria-label="Ajouter à la liste d'envies"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C.8 8 2 4.5 5.5 4c2-.3 3.7.6 4.5 2 .8-1.4 2.5-2.3 4.5-2C18 4.5 19.2 8 21.5 11.5 19 15.65 12 20 12 20z"/></svg></button>
+          <div class="ph" style="--c1:#E9DDC4; --c2:#B49563">
+            <img data-fallback src="assets/images/product-deux-pieces.jpg" alt="Ensemble deux pièces">
+            <span class="ph__flag"><i></i>product-deux-pieces.jpg</span>
+          </div>
+          <button class="card__quick" data-add>Ajout rapide</button>
+        </div>
+        <div class="card__body">
+          <div><h3>Ensemble Deux-Pièces</h3><p>Haut + bas · à composer</p></div>
+          <span class="card__price">85 €</span>
+        </div>
+      </article>
 
-    <article class="card">
-      <div class="card__media">
-        <div class="ph ph--vert"><span class="ph__tag">Photo produit · fond neutre</span></div>
-        <button class="card__quick" data-add>Ajout rapide</button>
-      </div>
-      <div class="card__body">
-        <div><h3>La Fouta</h3><p>Vert amande · 100 × 180</p></div>
-        <span class="card__price">55 €</span>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- ===================================================================
-     Savoir-faire — remonté de la page « marque » (audit C7)
-     =================================================================== -->
-<section class="section craft" id="craft">
-  <div class="wrap">
-    <div class="note note--tl" data-n="4">Paris / Portugal / OEKO-TEX justifient les 125 €. Aujourd'hui c'est enterré dans une page institutionnelle — ici c'est dans le parcours d'achat.</div>
-
-    <div class="craft__grid">
-      <div class="craft__media" data-reveal>
-        <div class="ph ph--sable"><span class="ph__tag">Photo · atelier, mains sur la machine</span></div>
-        <div class="ph ph--sea"><span class="ph__tag">Photo · détail tissu, macro</span></div>
-      </div>
-
-      <div data-reveal data-delay="1">
-        <p class="eyebrow eyebrow--accent">La Maison</p>
-        <h2>Dessiné à Paris. Cousu au Portugal.</h2>
-        <p class="lede">Depuis 2017, chaque pièce est pensée dans notre atelier parisien puis confectionnée dans deux ateliers familiaux du nord du Portugal. Les tissus viennent d'Italie. C'est plus lent et plus cher. C'est aussi pour ça qu'un maillot Anja tient dix étés.</p>
-
-        <ul class="facts">
-          <li><strong>Conception</strong><span>Paris 11e — patronnage et essayages en interne, du bonnet A au bonnet E.</span></li>
-          <li><strong>Confection</strong><span>Deux ateliers familiaux au Portugal, partenaires depuis la première collection.</span></li>
-          <li><strong>Matières</strong><span>Tissus italiens certifiés OEKO-TEX, résistants au chlore, au sel et aux crèmes solaires.</span></li>
-          <li><strong>Séries</strong><span>Production en séries limitées : on ne surproduit pas, et on ne brade pas.</span></li>
-        </ul>
-
-        <p style="margin-top:2rem"><a class="link-u" href="#">Découvrir l'histoire d'Anja</a></p>
-      </div>
     </div>
   </div>
 </section>
 
 <!-- ===================================================================
-     Finder — répond au constat C6
+     Éditorial — savoir-faire (Paris / Portugal / OEKO-TEX)
+     Bloc alterné image/texte plein écran, façon atelier Polène.
      =================================================================== -->
-<section class="section finder" id="finder">
-  <div class="wrap">
-    <div class="note note--tr" data-n="5">Le site actuel propose de filtrer par « maillots clairs ». Personne n'achète comme ça. Le vrai critère, c'est le bonnet et le maintien.</div>
+<section class="editorial" id="editorial">
+  <div class="editorial__media" data-reveal>
+    <div class="ph" style="--c1:#E4DCC8; --c2:#8B7C68">
+      <img data-fallback src="assets/images/atelier-1.jpg" alt="Atelier de confection">
+      <span class="ph__flag"><i></i>atelier-1.jpg</span>
+    </div>
+  </div>
+  <div class="editorial__body" data-reveal data-delay="1">
+    <p class="eyebrow">La Maison</p>
+    <h2>Dessiné à Paris. Cousu au Portugal.</h2>
+    <p class="lede">Depuis 2017, chaque pièce est pensée dans l'atelier parisien puis confectionnée dans des ateliers portugais partenaires, en tissus européens certifiés OEKO-TEX.</p>
+    <ul class="facts">
+      <li><strong>Conception</strong><span>Paris — patronnage et essayages en interne.</span></li>
+      <li><strong>Confection</strong><span>Ateliers partenaires au Portugal, depuis la première collection.</span></li>
+      <li><strong>Matières</strong><span>Tissus européens certifiés OEKO-TEX.</span></li>
+    </ul>
+    <p style="margin-top:1.75rem"><a class="link-u" href="#">Découvrir l'histoire d'Anja</a></p>
+  </div>
+</section>
 
-    <div class="finder__grid">
-      <div data-reveal>
-        <p class="eyebrow" style="color:rgba(255,253,248,.55)">Deux questions, trente secondes</p>
-        <h2>Trouve le maillot qui te tient vraiment.</h2>
-        <p class="lede" style="margin-top:1.25rem">Nous couvrons du bonnet A au bonnet E. C'est rare, et c'est précisément pour ça qu'il faut le dire avant la grille produit, pas après.</p>
-      </div>
+<section class="editorial editorial--reverse">
+  <div class="editorial__media" data-reveal>
+    <div class="ph" style="--c1:#D8C9A3; --c2:#3E5A66">
+      <img data-fallback src="assets/images/atelier-2.jpg" alt="Détail tissu">
+      <span class="ph__flag"><i></i>atelier-2.jpg</span>
+    </div>
+  </div>
+  <div class="editorial__body" data-reveal data-delay="1">
+    <p class="eyebrow">Les fondatrices</p>
+    <h2>Alexandra Thiltgès &amp; Lucie Hanon</h2>
+    <p class="lede">Anja Paris est née en 2017, portée par Alexandra Thiltgès puis rejointe par Lucie Hanon — une marque de maillots de bain et de prêt-à-porter solaire pensée pour accompagner les femmes à chaque étape de leur vie.</p>
+    <p style="margin-top:1.75rem"><a class="link-u" href="#">Lire leur histoire</a></p>
+  </div>
+</section>
 
-      <div class="finder__box" data-finder data-reveal data-delay="1">
-        <div class="finder__q" data-group="maintien">
-          <p>Tu cherches avant tout…</p>
-          <div class="chips">
-            <button class="chip" aria-pressed="false">Du maintien</button>
-            <button class="chip" aria-pressed="false">De l'allure</button>
-            <button class="chip" aria-pressed="false">Nager vraiment</button>
-            <button class="chip" aria-pressed="false">Le confort</button>
+<!-- ===================================================================
+     Carrousel — la collaboration au complet
+     =================================================================== -->
+<section class="section wrap" id="collab-icons" data-rail>
+  <div class="section-head section-head--split" data-reveal>
+    <div>
+      <p class="eyebrow">Édition limitée</p>
+      <h2>Anja × Havaianas, la collection.</h2>
+    </div>
+    <a class="link-u" href="collab.html">Voir la collaboration</a>
+  </div>
+
+  <div class="rail-wrap">
+    <div class="rail" data-reveal>
+      <article class="card">
+        <div class="card__media">
+          <span class="card__badge card__badge--collab">Collab</span>
+          <div class="ph" style="--c1:#E3A244; --c2:#00884A">
+            <img data-fallback src="assets/images/collab-le-solaire.jpg" alt="Le Solaire">
+            <span class="ph__flag"><i></i>collab-le-solaire.jpg</span>
           </div>
+          <button class="card__quick" data-add>Ajout rapide</button>
         </div>
-
-        <div class="finder__q" data-group="bonnet">
-          <p>Ton bonnet</p>
-          <div class="chips">
-            <button class="chip" aria-pressed="false">A</button>
-            <button class="chip" aria-pressed="false">B</button>
-            <button class="chip" aria-pressed="false">C</button>
-            <button class="chip" aria-pressed="false">D</button>
-            <button class="chip" aria-pressed="false">E et +</button>
+        <div class="card__body"><div><h3>Le Solaire</h3><p>Maillot + tongs</p></div><span class="card__price">185 €</span></div>
+      </article>
+      <article class="card">
+        <div class="card__media">
+          <span class="card__badge card__badge--collab">Collab</span>
+          <div class="ph" style="--c1:#00884A; --c2:#E3A244">
+            <img data-fallback src="assets/images/collab-le-rio.jpg" alt="Le Rio">
+            <span class="ph__flag"><i></i>collab-le-rio.jpg</span>
           </div>
+          <button class="card__quick" data-add>Ajout rapide</button>
         </div>
-
-        <div class="finder__result">
-          <p data-finder-out>Réponds aux deux questions pour voir ta sélection.</p>
-          <a class="btn btn--light" href="#" data-finder-cta hidden>Voir ma sélection</a>
+        <div class="card__body"><div><h3>Le Rio</h3><p>Deux pièces + tongs</p></div><span class="card__price">195 €</span></div>
+      </article>
+      <article class="card">
+        <div class="card__media">
+          <span class="card__badge card__badge--collab">Collab</span>
+          <div class="ph" style="--c1:#C2643C; --c2:#E7D5B8">
+            <img data-fallback src="assets/images/collab-le-terracotta.jpg" alt="Le Terracotta">
+            <span class="ph__flag"><i></i>collab-le-terracotta.jpg</span>
+          </div>
+          <button class="card__quick" data-add>Ajout rapide</button>
         </div>
-      </div>
+        <div class="card__body"><div><h3>Le Terracotta</h3><p>Maillot + tongs</p></div><span class="card__price">185 €</span></div>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- ===================================================================
-     Communauté — l'actif dormant (audit C8)
+     Communauté
      =================================================================== -->
-<section class="section section--tight wrap ugc">
+<section class="section section--tight wrap">
   <div class="section-head section-head--split" data-reveal>
     <div>
       <p class="eyebrow">#AnjaGirls</p>
       <h2>114 000 femmes, un été à la fois.</h2>
     </div>
-    <a class="link-u" href="#">Nous suivre sur Instagram</a>
+    <a class="link-u" href="#">Instagram</a>
   </div>
-
   <div class="ugc__grid" data-reveal>
-    <a class="ugc__item" href="#"><div class="ph ph--sun"></div><span class="ugc__handle">@camille.b</span></a>
-    <a class="ugc__item" href="#"><div class="ph ph--sea"></div><span class="ugc__handle">@lea.mrt</span></a>
-    <a class="ugc__item" href="#"><div class="ph ph--terra"></div><span class="ugc__handle">@sofia_dlc</span></a>
-    <a class="ugc__item" href="#"><div class="ph ph--sable"></div><span class="ugc__handle">@jeanne.p</span></a>
-    <a class="ugc__item" href="#"><div class="ph ph--rouge"></div><span class="ugc__handle">@margaux.v</span></a>
-    <a class="ugc__item" href="#"><div class="ph ph--vert"></div><span class="ugc__handle">@ines.rd</span></a>
-  </div>
-</section>
-
-<!-- ===================================================================
-     Fondatrices
-     =================================================================== -->
-<section class="section founders wrap">
-  <div class="founders__grid">
-    <div class="founders__media" data-reveal>
-      <div class="ph ph--nuit"><span class="ph__tag">Portrait · les deux fondatrices, atelier</span></div>
-    </div>
-    <div data-reveal data-delay="1">
-      <p class="eyebrow eyebrow--accent">Les fondatrices</p>
-      <blockquote>« Je ne trouvais jamais le maillot que je cherchais. Alors on l'a fait. »</blockquote>
-      <cite>Alexandra Thiltgès &amp; Lucie Hanon — fondatrices d'Anja Paris, 2017</cite>
-      <p style="margin-top:2rem"><a class="link-u" href="#">Lire leur histoire</a></p>
-    </div>
+    <a class="ugc__item" href="#"><div class="ph" style="--c1:#E3A244;--c2:#8B4A1E"><img data-fallback src="assets/images/community-1.jpg" alt=""><span class="ph__flag"><i></i>community-1.jpg</span></div><span class="ugc__handle">@camille.b</span></a>
+    <a class="ugc__item" href="#"><div class="ph" style="--c1:#5B8C93;--c2:#1E3A4A"><img data-fallback src="assets/images/community-2.jpg" alt=""><span class="ph__flag"><i></i>community-2.jpg</span></div><span class="ugc__handle">@lea.mrt</span></a>
+    <a class="ugc__item" href="#"><div class="ph" style="--c1:#C2643C;--c2:#6B2F16"><img data-fallback src="assets/images/community-3.jpg" alt=""><span class="ph__flag"><i></i>community-3.jpg</span></div><span class="ugc__handle">@sofia_dlc</span></a>
+    <a class="ugc__item" href="#"><div class="ph" style="--c1:#D9C3A3;--c2:#8B7355"><img data-fallback src="assets/images/community-4.jpg" alt=""><span class="ph__flag"><i></i>community-4.jpg</span></div><span class="ugc__handle">@jeanne.p</span></a>
+    <a class="ugc__item" href="#"><div class="ph" style="--c1:#B6362E;--c2:#5A130E"><img data-fallback src="assets/images/community-5.jpg" alt=""><span class="ph__flag"><i></i>community-5.jpg</span></div><span class="ugc__handle">@margaux.v</span></a>
+    <a class="ugc__item" href="#"><div class="ph" style="--c1:#8FAE92;--c2:#3C5A45"><img data-fallback src="assets/images/community-6.jpg" alt=""><span class="ph__flag"><i></i>community-6.jpg</span></div><span class="ugc__handle">@ines.rd</span></a>
   </div>
 </section>
 
 <!-- ===================================================================
      Réassurance
      =================================================================== -->
-<section class="section section--tight trust">
-  <div class="wrap">
-    <div class="trust__grid">
-      <div class="trust__item" data-reveal>
-        <svg viewBox="0 0 24 24"><path d="M3 8h13v9H3z"/><path d="M16 11h4l1 3v3h-5z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
-        <strong>Livraison offerte dès 120 €</strong><span>Expédition sous 48 h depuis Paris</span>
-      </div>
-      <div class="trust__item" data-reveal data-delay="1">
-        <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
-        <strong>Retours gratuits 30 jours</strong><span>Étiquette prépayée dans le colis</span>
-      </div>
-      <div class="trust__item" data-reveal data-delay="2">
-        <svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
-        <strong>Certifié OEKO-TEX</strong><span>Tissus italiens, confection portugaise</span>
-      </div>
-      <div class="trust__item" data-reveal data-delay="3">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        <strong>Conseil personnalisé</strong><span>Du lundi au samedi, 9 h – 18 h</span>
-      </div>
+<section class="section section--tight wrap">
+  <div class="trust__grid">
+    <div class="trust__item" data-reveal>
+      <svg viewBox="0 0 24 24"><path d="M3 8h13v9H3z"/><path d="M16 11h4l1 3v3h-5z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+      <strong>Livraison offerte dès 120 €</strong><span>Expédition sous 48 h</span>
+    </div>
+    <div class="trust__item" data-reveal data-delay="1">
+      <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+      <strong>Retours gratuits 30 jours</strong><span>Étiquette prépayée</span>
+    </div>
+    <div class="trust__item" data-reveal data-delay="2">
+      <svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+      <strong>Certifié OEKO-TEX</strong><span>Confection portugaise</span>
+    </div>
+    <div class="trust__item" data-reveal data-delay="3">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <strong>Conseil personnalisé</strong><span>Du lundi au samedi</span>
     </div>
   </div>
 </section>
@@ -602,18 +437,16 @@
      Newsletter
      =================================================================== -->
 <section class="section news">
-  <div class="wrap news__inner">
+  <div class="wrap">
     <div data-reveal>
       <h2>Le premier été, avant tout le monde.</h2>
-      <p>La collab Anja × Havaianas sort en série limitée. Les inscrites y ont accès 48 h avant l'ouverture publique.</p>
+      <p>La collab Anja × Havaianas sort en série limitée. Accès 48 h avant l'ouverture publique.</p>
     </div>
-    <div data-reveal data-delay="1">
-      <form class="news__form">
-        <input type="email" required placeholder="Votre adresse e-mail" aria-label="Adresse e-mail">
-        <button class="btn btn--light" type="submit">Je m'inscris</button>
-      </form>
-      <p class="news__note">Un e-mail par mois maximum. Désinscription en un clic.</p>
-    </div>
+    <form class="news__form" data-reveal data-delay="1">
+      <input type="email" required placeholder="Votre adresse e-mail" aria-label="Adresse e-mail">
+      <button class="btn btn--light" type="submit">Je m'inscris</button>
+    </form>
+    <p class="news__note">Un e-mail par mois maximum. Désinscription en un clic.</p>
   </div>
 </section>
 
@@ -625,72 +458,59 @@
 <footer class="footer">
   <div class="wrap">
     <div class="footer__grid">
-
       <div class="footer__brand">
         <span class="logo">Anja Paris</span>
-        <p>Maillots de bain et beachwear solaires, dessinés à Paris et confectionnés au Portugal depuis 2017.</p>
+        <p>Maillots de bain et beachwear dessinés à Paris et confectionnés au Portugal depuis 2017.</p>
         <div class="socials">
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
           <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 18l2-7"/><path d="M9 10c0-2 1.5-3 3-3s3 1 3 3-1 4-3 4"/></svg></a>
           <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 4v10a4 4 0 1 1-4-4"/><path d="M14 7a5 5 0 0 0 5 4"/></svg></a>
         </div>
       </div>
-
       <div class="footer__col">
         <h4>Boutique</h4>
         <ul>
-          <li><a href="#">Maillots de bain</a></li>
-          <li><a href="#">Beachwear</a></li>
-          <li><a href="#">Accessoires</a></li>
+          <li><a href="#icons">One Piece</a></li>
+          <li><a href="#icons">Two Pieces</a></li>
+          <li><a href="#editorial">Ready-to-Wear</a></li>
           <li><a href="collab.html">Anja × Havaianas</a></li>
-          <li><a href="#">Nouveautés</a></li>
         </ul>
       </div>
-
       <div class="footer__col">
         <h4>Aide</h4>
         <ul>
           <li><a href="#">Guide des tailles</a></li>
           <li><a href="#">Livraison</a></li>
           <li><a href="#">Retours &amp; échanges</a></li>
-          <li><a href="#">Entretien du maillot</a></li>
           <li><a href="#">Nous contacter</a></li>
         </ul>
       </div>
-
       <div class="footer__col">
         <h4>La Maison</h4>
         <ul>
-          <li><a href="#">Notre histoire</a></li>
-          <li><a href="#">Les fondatrices</a></li>
-          <li><a href="#">Nos ateliers</a></li>
+          <li><a href="#editorial">Notre histoire</a></li>
+          <li><a href="#editorial">Les fondatrices</a></li>
+          <li><a href="#">Stores</a></li>
           <li><a href="#">Engagements</a></li>
-          <li><a href="#">Points de vente</a></li>
         </ul>
       </div>
-
       <div class="footer__col">
         <h4>Suivez-nous</h4>
         <ul>
           <li><a href="#">Instagram</a></li>
           <li><a href="#">Pinterest</a></li>
           <li><a href="#">TikTok</a></li>
-          <li><a href="#">Newsletter</a></li>
         </ul>
       </div>
-
     </div>
-
     <div class="footer__bottom">
-      <span>© 2027 Anja Paris — Prototype de refonte, document de travail</span>
-      <span>CGV · Mentions légales · Confidentialité · Cookies</span>
+      <span>© 2027 Anja Paris — Prototype de démonstration, structure inspirée de polene-paris.com</span>
+      <span>CGV · Mentions légales · Confidentialité</span>
     </div>
   </div>
 </footer>
 
-<button class="notes-toggle" aria-pressed="false">
-  <i></i> Mode présentation
-</button>
+<button class="notes-toggle" aria-pressed="false"><i></i> Mode présentation</button>
 
 <script src="assets/js/main.js"></script>
 </body>

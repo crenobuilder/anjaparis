@@ -1,6 +1,6 @@
 /* ==========================================================================
-   ANJA PARIS — Proposition de refonte
-   Interactions de la page. Zéro dépendance.
+   ANJA PARIS — Prototype structuré sur le modèle Polène
+   Zéro dépendance.
    ========================================================================== */
 (function () {
   'use strict';
@@ -8,8 +8,32 @@
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ----------------------------------------------------------------------
-     1. Barre d'annonce — rotation des messages de réassurance.
-        Remplace le bandeau promo permanent (constat C2 de l'audit).
+     1. Bascule automatique placeholder → vraie photo.
+        Chaque <img data-fallback> pointe vers un fichier attendu dans
+        assets/images/. S'il n'existe pas encore, le dégradé reste visible.
+        Le jour où le fichier est déposé au bon nom, il s'affiche seul,
+        sans toucher au code. Voir assets/images/README.md.
+     ---------------------------------------------------------------------- */
+  function initImageFallback() {
+    document.querySelectorAll('img[data-fallback]').forEach(function (img) {
+      var wrap = img.closest('.ph');
+      img.addEventListener('load', function () {
+        img.classList.add('is-loaded');
+        if (wrap) wrap.classList.add('has-real');
+      });
+      img.addEventListener('error', function () {
+        img.remove(); // le fond en dégradé du .ph reste visible
+      });
+      // Si l'image est déjà en cache au chargement du script
+      if (img.complete && img.naturalWidth > 0) {
+        img.classList.add('is-loaded');
+        if (wrap) wrap.classList.add('has-real');
+      }
+    });
+  }
+
+  /* ----------------------------------------------------------------------
+     2. Barre d'annonce — rotation des messages
      ---------------------------------------------------------------------- */
   function initAnnounce() {
     var items = document.querySelectorAll('.announce__item');
@@ -23,28 +47,25 @@
   }
 
   /* ----------------------------------------------------------------------
-     2. Header — transparent sur le hero, opaque dès qu'on scrolle.
+     3. Header — transparent sur le hero, opaque au scroll
      ---------------------------------------------------------------------- */
   function initHeader() {
     var header = document.querySelector('.header');
     if (!header) return;
-
     var hero = document.querySelector('.hero');
-    var threshold = hero ? hero.offsetHeight - 120 : 80;
+    var threshold = hero ? hero.offsetHeight - 110 : 80;
 
-    function update() {
-      header.classList.toggle('is-solid', window.scrollY > threshold);
-    }
+    function update() { header.classList.toggle('is-solid', window.scrollY > threshold); }
     window.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', function () {
-      threshold = hero ? hero.offsetHeight - 120 : 80;
+      threshold = hero ? hero.offsetHeight - 110 : 80;
       update();
     });
     update();
   }
 
   /* ----------------------------------------------------------------------
-     3. Méga-menu éditorial — ouverture au survol et au clavier.
+     4. Mega-menu plein écran — ouverture au survol et au clavier
      ---------------------------------------------------------------------- */
   function initMega() {
     var items = document.querySelectorAll('.nav__item--has-mega');
@@ -54,16 +75,21 @@
       var link = item.querySelector('.nav__link');
       var timer;
 
+      var mega = item.querySelector('.mega');
       function open() {
         clearTimeout(timer);
         items.forEach(function (o) { if (o !== item) o.classList.remove('is-open'); });
         item.classList.add('is-open');
+        document.body.classList.add('is-locked');
         if (link) link.setAttribute('aria-expanded', 'true');
+        if (mega) mega.setAttribute('aria-hidden', 'false');
       }
       function close(delay) {
         timer = setTimeout(function () {
           item.classList.remove('is-open');
+          document.body.classList.remove('is-locked');
           if (link) link.setAttribute('aria-expanded', 'false');
+          if (mega) mega.setAttribute('aria-hidden', 'true');
         }, delay || 0);
       }
 
@@ -79,12 +105,16 @@
           item.classList.contains('is-open') ? close() : open();
         });
       }
+      item.querySelectorAll('.mega a').forEach(function (a) {
+        a.addEventListener('click', function () { close(); });
+      });
     });
 
     document.addEventListener('keydown', function (e) {
       if (e.key !== 'Escape') return;
       items.forEach(function (item) {
         item.classList.remove('is-open');
+        document.body.classList.remove('is-locked');
         var l = item.querySelector('.nav__link');
         if (l) l.setAttribute('aria-expanded', 'false');
       });
@@ -92,7 +122,7 @@
   }
 
   /* ----------------------------------------------------------------------
-     4. Menu mobile
+     5. Menu mobile
      ---------------------------------------------------------------------- */
   function initDrawer() {
     var burger = document.querySelector('.burger');
@@ -104,76 +134,11 @@
       document.body.classList.toggle('is-locked', open);
       burger.setAttribute('aria-expanded', String(open));
     });
-
     drawer.addEventListener('click', function (e) {
       if (e.target.tagName !== 'A') return;
       document.body.classList.remove('menu-open', 'is-locked');
       burger.setAttribute('aria-expanded', 'false');
     });
-  }
-
-  /* ----------------------------------------------------------------------
-     5. Spotlight — les produits se révèlent au fil du scroll.
-        La section fait N × 100vh ; son contenu est collant (sticky).
-        On déduit l'index actif de la progression dans la section.
-        Sur mobile et en mouvement réduit, le CSS remet tout à plat.
-     ---------------------------------------------------------------------- */
-  function initSpotlight() {
-    var sections = document.querySelectorAll('[data-spotlight]');
-    if (!sections.length) return;
-
-    var ticking = false;
-
-    function render() {
-      ticking = false;
-      var isStacked = window.innerWidth <= 960 || reduced;
-
-      sections.forEach(function (section) {
-        var shots = section.querySelectorAll('.spotlight__shot');
-        var items = section.querySelectorAll('.spotlight__item');
-        var dots  = section.querySelectorAll('.spotlight__dot');
-        var n = items.length;
-        if (!n) return;
-
-        if (isStacked) {
-          items.forEach(function (el) { el.classList.add('is-active'); });
-          return;
-        }
-
-        // La scène est collée sous le header : la progression court entre
-        // le moment où elle se colle et celui où la section la relâche.
-        var stage = section.querySelector('.spotlight__stage');
-        var stuckAt = stage ? stage.getBoundingClientRect().height : window.innerHeight;
-        var top = parseFloat(getComputedStyle(document.documentElement)
-          .getPropertyValue('--header-h')) || 0;
-
-        var rect = section.getBoundingClientRect();
-        var scrollable = section.offsetHeight - stuckAt;
-        var progress = scrollable > 0 ? (top - rect.top) / scrollable : 0;
-        progress = Math.min(Math.max(progress, 0), 0.9999);
-
-        var index = Math.floor(progress * n);
-        if (index === section._idx) return;
-        section._idx = index;
-
-        [shots, items, dots].forEach(function (list) {
-          list.forEach(function (el, i) { el.classList.toggle('is-active', i === index); });
-        });
-      });
-    }
-
-    function onScroll() {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(render);
-    }
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', function () {
-      sections.forEach(function (s) { s._idx = null; });
-      onScroll();
-    });
-    render();
   }
 
   /* ----------------------------------------------------------------------
@@ -187,110 +152,125 @@
       targets.forEach(function (el) { el.classList.add('is-in'); });
       return;
     }
-
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         entry.target.classList.add('is-in');
         io.unobserve(entry.target);
       });
-    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.05 });
-
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
     targets.forEach(function (el) { io.observe(el); });
   }
 
   /* ----------------------------------------------------------------------
-     7. Finder — « trouve ton maillot ».
-        Répond au constat C6 : filtrer par morphologie et bonnet,
-        pas par « maillots clairs ».
+     7. Carte produit flottante du hero — apparition différée
      ---------------------------------------------------------------------- */
-  function initFinder() {
-    var box = document.querySelector('[data-finder]');
-    if (!box) return;
-
-    var out = box.querySelector('[data-finder-out]');
-    var cta = box.querySelector('[data-finder-cta]');
-    var answers = {};
-
-    box.addEventListener('click', function (e) {
-      var chip = e.target.closest('.chip');
-      if (!chip) return;
-
-      var group = chip.closest('[data-group]');
-      var key = group.dataset.group;
-
-      group.querySelectorAll('.chip').forEach(function (c) {
-        c.setAttribute('aria-pressed', String(c === chip));
-      });
-      answers[key] = chip.textContent.trim();
-      update();
-    });
-
-    function update() {
-      var keys = Object.keys(answers);
-      if (!out) return;
-
-      if (!keys.length) {
-        out.innerHTML = 'Réponds aux deux questions pour voir ta sélection.';
-        if (cta) cta.hidden = true;
-        return;
-      }
-      if (keys.length < 2) {
-        out.innerHTML = 'Encore une question et on te montre la sélection.';
-        if (cta) cta.hidden = true;
-        return;
-      }
-
-      var count = 6 + (answers.bonnet ? answers.bonnet.length : 0) % 7;
-      out.innerHTML = '<b>' + count + ' maillots</b> correspondent à « ' +
-        answers.maintien + ' » en bonnet ' + answers.bonnet + '.';
-      if (cta) cta.hidden = false;
-    }
-
-    update();
-  }
-
-  /* ----------------------------------------------------------------------
-     8. Nuanciers produit
-     ---------------------------------------------------------------------- */
-  function initSwatches() {
-    document.querySelectorAll('[data-swatches]').forEach(function (group) {
-      group.addEventListener('click', function (e) {
-        var sw = e.target.closest('.swatch');
-        if (!sw) return;
-        group.querySelectorAll('.swatch').forEach(function (s) {
-          s.setAttribute('aria-pressed', String(s === sw));
-        });
-      });
+  function initHeroTag() {
+    var tag = document.querySelector('.hero__tag');
+    if (!tag) return;
+    if (reduced) { tag.classList.add('is-in'); return; }
+    window.requestAnimationFrame(function () {
+      setTimeout(function () { tag.classList.add('is-in'); }, 300);
     });
   }
 
   /* ----------------------------------------------------------------------
-     9. Ajout panier — simulation pour la démo
+     8. Carrousel produits — drag horizontal + flèches, façon Polène
+     ---------------------------------------------------------------------- */
+  function initRails() {
+    document.querySelectorAll('[data-rail]').forEach(function (wrap) {
+      var rail = wrap.querySelector('.rail');
+      var prev = wrap.querySelector('[data-rail-prev]');
+      var next = wrap.querySelector('[data-rail-next]');
+      if (!rail) return;
+
+      // La capture de pointeur ne démarre qu'après un vrai glissement
+      // (seuil dépassé) : un simple clic sur un bouton enfant (wishlist,
+      // ajout rapide, lien produit) doit lui parvenir normalement.
+      var isDown = false, startX = 0, startScroll = 0, moved = false, pointerId = null;
+      var DRAG_THRESHOLD = 6;
+
+      rail.addEventListener('pointerdown', function (e) {
+        if (e.button !== undefined && e.button !== 0) return;
+        isDown = true; moved = false; pointerId = e.pointerId;
+        startX = e.clientX; startScroll = rail.scrollLeft;
+      });
+      rail.addEventListener('pointermove', function (e) {
+        if (!isDown) return;
+        var dx = e.clientX - startX;
+        if (!moved && Math.abs(dx) > DRAG_THRESHOLD) {
+          moved = true;
+          rail.classList.add('is-dragging');
+          try { rail.setPointerCapture(pointerId); } catch (err) { /* ignore */ }
+        }
+        if (moved) rail.scrollLeft = startScroll - dx;
+      });
+      function release(e) {
+        isDown = false;
+        rail.classList.remove('is-dragging');
+        if (moved && pointerId != null) {
+          try { rail.releasePointerCapture(pointerId); } catch (err) { /* ignore */ }
+        }
+      }
+      rail.addEventListener('pointerup', release);
+      rail.addEventListener('pointercancel', release);
+      rail.addEventListener('pointerleave', function (e) { if (isDown && !moved) release(e); });
+      rail.addEventListener('click', function (e) {
+        if (moved) { e.preventDefault(); e.stopPropagation(); }
+      }, true);
+
+      function step() {
+        var card = rail.querySelector('.card');
+        return card ? card.getBoundingClientRect().width + 24 : 300;
+      }
+      function updateNav() {
+        if (!prev || !next) return;
+        prev.disabled = rail.scrollLeft <= 4;
+        next.disabled = rail.scrollLeft >= rail.scrollWidth - rail.clientWidth - 4;
+      }
+      if (prev) prev.addEventListener('click', function () {
+        rail.scrollBy({ left: -step(), behavior: reduced ? 'auto' : 'smooth' });
+      });
+      if (next) next.addEventListener('click', function () {
+        rail.scrollBy({ left: step(), behavior: reduced ? 'auto' : 'smooth' });
+      });
+      rail.addEventListener('scroll', updateNav, { passive: true });
+      updateNav();
+    });
+  }
+
+  /* ----------------------------------------------------------------------
+     9. Ajout panier / liste d'envies — simulation pour la démo
      ---------------------------------------------------------------------- */
   function initCart() {
-    var counter = document.querySelector('.cart-count');
-    if (!counter) return;
+    var cartCount = document.querySelector('.cart-count');
+    var wishCount = document.querySelector('.wish-count');
 
     document.addEventListener('click', function (e) {
-      var btn = e.target.closest('[data-add]');
-      if (!btn) return;
-      e.preventDefault();
-      counter.textContent = String(parseInt(counter.textContent, 10) + 1);
-      var label = btn.textContent;
-      btn.textContent = 'Ajouté ✓';
-      setTimeout(function () { btn.textContent = label; }, 1400);
+      var add = e.target.closest('[data-add]');
+      if (add) {
+        e.preventDefault();
+        if (cartCount) cartCount.textContent = String(parseInt(cartCount.textContent, 10) + 1);
+        var label = add.textContent;
+        add.textContent = 'Ajouté';
+        setTimeout(function () { add.textContent = label; }, 1300);
+        return;
+      }
+      var wish = e.target.closest('.card__wish');
+      if (wish) {
+        e.preventDefault();
+        var active = wish.classList.toggle('is-active');
+        if (wishCount) wishCount.textContent = String(Math.max(0, parseInt(wishCount.textContent, 10) + (active ? 1 : -1)));
+      }
     });
   }
 
   /* ----------------------------------------------------------------------
-     10. Mode présentation — affiche les annotations de soutenance.
-         Se mémorise d'une page à l'autre du prototype.
+     10. Mode présentation
      ---------------------------------------------------------------------- */
   function initNotes() {
     var toggle = document.querySelector('.notes-toggle');
     if (!toggle) return;
-
     var KEY = 'anja-notes';
     var on = false;
     try { on = sessionStorage.getItem(KEY) === '1'; } catch (err) { /* navigation privée */ }
@@ -299,19 +279,16 @@
       document.body.classList.toggle('show-notes', on);
       toggle.setAttribute('aria-pressed', String(on));
     }
-
     toggle.addEventListener('click', function () {
       on = !on;
       try { sessionStorage.setItem(KEY, on ? '1' : '0'); } catch (err) { /* ignore */ }
       apply();
     });
-
     document.addEventListener('keydown', function (e) {
       if (e.key !== 'n' && e.key !== 'N') return;
       if (/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)) return;
       toggle.click();
     });
-
     apply();
   }
 
@@ -324,22 +301,23 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var btn = form.querySelector('button');
+      var label = btn.textContent;
       btn.textContent = 'Merci !';
       form.querySelector('input').value = '';
-      setTimeout(function () { btn.textContent = "Je m'inscris"; }, 2200);
+      setTimeout(function () { btn.textContent = label; }, 2200);
     });
   }
 
   /* ---------------------------------------------------------------------- */
   function boot() {
+    initImageFallback();
     initAnnounce();
     initHeader();
     initMega();
     initDrawer();
-    initSpotlight();
     initReveal();
-    initFinder();
-    initSwatches();
+    initHeroTag();
+    initRails();
     initCart();
     initNotes();
     initNewsletter();
