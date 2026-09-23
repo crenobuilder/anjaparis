@@ -32,7 +32,7 @@ ci-dessus).
 | `hero-collab.jpg` | Photo fournie par le client, sans flocage | Hero plein écran de la home et de `collab.html` |
 | `hero-collab-tag.jpg` | Recadrage de `collab-duo-le-fidele.jpg` | Carte produit flottante du hero (les deux pages) |
 | `collab-duo-le-fidele.jpg` | Photo produit fournie par le client, floquée par nos soins (lockup recomposé avec le vrai logo Anja — l'original généré utilisait une police "Anja" inventée par l'IA, différente du logo réel) | Bandeau collab (les deux pages) + carrousel « Anja × Havaianas » de la home |
-| `collab-tongs-detail.jpg` | Recadrage de `collab-duo-le-fidele.jpg`, plan serré sur la tong | Bloc éditorial « Le détail » de `collab.html` |
+| `collab-tongs-detail.png` | Photo produit fournie par le client (déjà détourée, fond transparent) | Bloc éditorial « Le détail » de `collab.html`, en packshot sur fond ivoire |
 
 ## Déjà intégré — catalogue réel Anja
 
