@@ -94,7 +94,7 @@
       <div class="header__utility">
         <div class="header__utility__row">
           <span class="util-link">FR</span>
-          <button class="icon-btn" aria-label="Rechercher">
+          <button class="icon-btn" aria-label="Rechercher" data-demo-trigger>
             <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
           </button>
           <button class="icon-btn" aria-label="Liste d'envies">
@@ -565,6 +565,15 @@
 </footer>
 
 <button class="notes-toggle" aria-pressed="false"><i></i> Mode présentation</button>
+
+<!-- Toast « démo » — voir assets/js/main.js, initDemoToast() -->
+<div class="demo-toast" id="demoToast" role="status" aria-live="polite">
+  <div class="demo-toast__glass">
+    <svg class="demo-toast__icon" viewBox="0 0 24 24"><path d="M12 2l1.8 5.6L19.5 9.5l-5.7 1.9L12 17l-1.8-5.6L4.5 9.5l5.7-1.9z"/></svg>
+    <p><strong>Prototype de démonstration</strong> — ce lien ne mène nulle part dans ce prototype à deux pages.</p>
+    <button class="demo-toast__close" aria-label="Fermer"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+</div>
 
 <script src="assets/js/main.js"></script>
 </body>

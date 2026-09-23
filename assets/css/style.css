@@ -446,6 +446,7 @@ body.menu-open .drawer { transform: translateX(0); }
 .brand-lockup__anja svg { display: block; height: 1em; width: auto; fill: currentColor; }
 .brand-lockup--sm { font-size: clamp(1.0625rem, 1.8vw, 1.375rem); }
 .brand-lockup--lg { font-size: clamp(2rem, 5vw, 3.5rem); }
+.brand-lockup--xl { font-size: clamp(2.5rem, 7vw, 5.5rem); }
 
 .hero__mark {
   position: absolute; top: calc(var(--header-h) + clamp(1.5rem, 4vw, 3rem)); left: var(--gutter);
@@ -757,7 +758,59 @@ body.show-notes .note { display: block; }
 }
 
 /* --------------------------------------------------------------------------
-   22. Accessibilité — mouvement réduit
+   22. Toast « démo » — liquid glass, façon iOS
+   S'affiche quand on clique un lien qui ne mène nulle part dans ce
+   prototype à une seule page (catégories, footer, réseaux sociaux…).
+   -------------------------------------------------------------------------- */
+.demo-toast {
+  position: fixed; left: 50%; bottom: clamp(1.25rem, 4vw, 2.5rem);
+  z-index: 300;
+  transform: translateX(-50%) translateY(18px) scale(.94);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .35s var(--ease-out), transform .45s cubic-bezier(.34, 1.56, .64, 1), visibility .45s;
+  width: min(420px, calc(100vw - 2.5rem));
+}
+.demo-toast.is-visible {
+  transform: translateX(-50%) translateY(0) scale(1);
+  opacity: 1; visibility: visible; pointer-events: auto;
+}
+.demo-toast__glass {
+  display: flex; align-items: center; gap: .8rem;
+  padding: .9rem 1rem .9rem 1.1rem;
+  border-radius: 100px;
+  background: rgba(28, 27, 25, .58);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow:
+    0 24px 48px -20px rgba(0,0,0,.5),
+    inset 0 1px 0 rgba(255,255,255,.16);
+  color: var(--paper);
+}
+.demo-toast__icon {
+  flex: none; width: 20px; height: 20px;
+  stroke: #E9B44C; fill: none; stroke-width: 1.5;
+}
+.demo-toast__glass p {
+  font-size: var(--fs-small); line-height: 1.4; flex: 1;
+}
+.demo-toast__glass strong { font-weight: 600; }
+.demo-toast__close {
+  flex: none; width: 26px; height: 26px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(255,255,255,.12);
+  transition: background-color .25s var(--ease);
+}
+.demo-toast__close:hover { background: rgba(255,255,255,.22); }
+.demo-toast__close svg { width: 11px; height: 11px; stroke: currentColor; stroke-width: 1.8; }
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-toast { transition: opacity .2s linear, visibility .2s; }
+  .demo-toast.is-visible { transform: translateX(-50%); }
+}
+
+/* --------------------------------------------------------------------------
+   23. Accessibilité — mouvement réduit
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

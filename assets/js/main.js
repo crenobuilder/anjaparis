@@ -102,7 +102,12 @@
       if (link) {
         link.addEventListener('click', function (e) {
           e.preventDefault();
-          item.classList.contains('is-open') ? close() : open();
+          // Toujours ouvrir, jamais fermer ici : à la souris, mouseenter a
+          // déjà ouvert le panneau avant que le clic n'arrive, donc un
+          // vrai toggle refermerait le menu au clic juste après l'avoir
+          // ouvert au survol. Fermer reste possible via Échap, un clic
+          // sur le fond du panneau, ou le fait de sortir la souris.
+          open();
         });
       }
       item.querySelectorAll('.mega a').forEach(function (a) {
@@ -318,6 +323,46 @@
     });
   }
 
+  /* ----------------------------------------------------------------------
+     12. Toast « démo » — liquid glass.
+         Ce prototype tient sur deux pages ; tout ce qui devrait mener
+         vers une page qui n'existe pas (catégories, footer, réseaux,
+         recherche…) affiche ce toast au lieu de ne rien faire ou de
+         casser. Les liens qui ont déjà un vrai comportement (mega-menu,
+         ajout panier, ancres internes, lien vers l'autre page) sont
+         explicitement exclus et continuent de fonctionner normalement.
+     ---------------------------------------------------------------------- */
+  function initDemoToast() {
+    var toast = document.getElementById('demoToast');
+    if (!toast) return;
+    var closeBtn = toast.querySelector('.demo-toast__close');
+    var hideTimer;
+
+    function show() {
+      clearTimeout(hideTimer);
+      toast.classList.add('is-visible');
+      hideTimer = setTimeout(hide, 3200);
+    }
+    function hide() {
+      clearTimeout(hideTimer);
+      toast.classList.remove('is-visible');
+    }
+
+    document.addEventListener('click', function (e) {
+      var explicit = e.target.closest('[data-demo-trigger]');
+      var deadLink = e.target.closest('a[href="#"]');
+      if (deadLink && (deadLink.hasAttribute('data-add') || deadLink.hasAttribute('aria-expanded'))) {
+        deadLink = null; // mega-menu trigger ou ajout panier : comportement déjà réel
+      }
+      var target = explicit || deadLink;
+      if (!target) return;
+      if (deadLink) e.preventDefault();
+      show();
+    });
+
+    closeBtn.addEventListener('click', hide);
+  }
+
   /* ---------------------------------------------------------------------- */
   function boot() {
     initImageFallback();
@@ -331,6 +376,7 @@
     initCart();
     initNotes();
     initNewsletter();
+    initDemoToast();
   }
 
   document.readyState === 'loading'
