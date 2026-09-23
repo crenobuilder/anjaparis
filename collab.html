@@ -79,49 +79,50 @@
 <main id="main">
 
 <!-- ===================================================================
-     Hero collaboration
+     Hero — même composant que la home (photo plein écran + carte
+     produit flottante), pour garder exactement la même DA.
      =================================================================== -->
-<section class="chero">
-  <div class="chero__bg" aria-hidden="true"></div>
+<section class="hero">
+  <div class="hero__media">
+    <div class="ph">
+      <img data-fallback src="assets/images/hero-collab.jpg" alt="Anja × Havaianas, deux modèles sur la plage au coucher du soleil">
+    </div>
+  </div>
+  <div class="hero__scrim"></div>
 
-  <div class="note note--br" data-n="1">Havaianas a déjà collaboré avec Isabel Marant (mai 2026). Le format est rodé de leur côté — c'est ce qui rend cette proposition crédible.</div>
+  <div class="hero__mark">
+    <p class="mark-eyebrow">Édition limitée · Juin 2027</p>
+    <div class="brand-lockup brand-lockup--sm">
+      <span class="brand-lockup__hav">havaianas</span>
+      <span class="brand-lockup__x">×</span>
+      <span class="brand-lockup__anja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.671 36.85"><defs><style>.a{fill:currentColor;}</style></defs><path class="a" d="M1.171-3.826V-6.053H2.956a1.341,1.341,0,0,1,.877.275,1.02,1.02,0,0,1,.336.839,1.02,1.02,0,0,1-.336.839,1.341,1.341,0,0,1-.877.275ZM.653-6.5v5.444h.519V-3.384h1.9a2.019,2.019,0,0,0,.663-.1,1.4,1.4,0,0,0,.511-.305,1.348,1.348,0,0,0,.328-.492,1.774,1.774,0,0,0,.114-.656A1.774,1.774,0,0,0,4.572-5.6a1.348,1.348,0,0,0-.328-.492,1.4,1.4,0,0,0-.511-.305,2.019,2.019,0,0,0-.663-.1Zm7.923,0h.58L11.29-1.051h-.557L8.842-5.977,6.936-1.051H6.379ZM13.829-3.91V-6.053h1.937a1.2,1.2,0,0,1,.885.29,1.072,1.072,0,0,1,.29.793,1,1,0,0,1-.1.446,1.027,1.027,0,0,1-.255.332,1.121,1.121,0,0,1-.374.21,1.391,1.391,0,0,1-.45.072ZM13.311-6.5v5.444h.519V-3.468H15.8a.967.967,0,0,1,.576.122.9.9,0,0,1,.32.362,1.576,1.576,0,0,1,.145.511q.034.286.05.576.008.084.015.2t.019.233a1.652,1.652,0,0,0,.038.229.666.666,0,0,0,.072.187H17.6a.729.729,0,0,1-.133-.278A2.473,2.473,0,0,1,17.4-1.71q-.023-.2-.031-.4t-.015-.336a2.707,2.707,0,0,0-.065-.454,1.082,1.082,0,0,0-.16-.37.889.889,0,0,0-.286-.263,1.208,1.208,0,0,0-.442-.141v-.015a1.217,1.217,0,0,0,.793-.488,1.529,1.529,0,0,0,.267-.9,1.424,1.424,0,0,0-.133-.637,1.23,1.23,0,0,0-.358-.442,1.538,1.538,0,0,0-.526-.255A2.363,2.363,0,0,0,15.8-6.5Zm6.649,0v5.444h.519V-6.5Zm3.424,3.652h-.519A1.924,1.924,0,0,0,23-1.981a1.5,1.5,0,0,0,.446.587,1.921,1.921,0,0,0,.7.339,3.431,3.431,0,0,0,.892.111,3.364,3.364,0,0,0,.824-.088,2.124,2.124,0,0,0,.576-.229,1.3,1.3,0,0,0,.366-.316,1.614,1.614,0,0,0,.206-.347,1.23,1.23,0,0,0,.092-.324,2.069,2.069,0,0,0,.019-.244,1.342,1.342,0,0,0-.111-.572,1.159,1.159,0,0,0-.305-.4,1.8,1.8,0,0,0-.45-.275,3.815,3.815,0,0,0-.545-.187l-1.327-.328a2,2,0,0,1-.316-.1.947.947,0,0,1-.263-.16.7.7,0,0,1-.179-.24.788.788,0,0,1-.065-.332,1.04,1.04,0,0,1,.114-.511.947.947,0,0,1,.3-.332,1.289,1.289,0,0,1,.435-.183,2.282,2.282,0,0,1,.515-.057,1.888,1.888,0,0,1,.553.08,1.435,1.435,0,0,1,.465.236,1.217,1.217,0,0,1,.328.389,1.261,1.261,0,0,1,.141.545h.519a1.578,1.578,0,0,0-.164-.736,1.587,1.587,0,0,0-.438-.53,1.9,1.9,0,0,0-.641-.32,2.737,2.737,0,0,0-.77-.107,2.307,2.307,0,0,0-.938.164,1.665,1.665,0,0,0-.576.4,1.293,1.293,0,0,0-.286.5,1.727,1.727,0,0,0-.076.465,1.278,1.278,0,0,0,.1.541,1.159,1.159,0,0,0,.271.374,1.313,1.313,0,0,0,.393.244,3.631,3.631,0,0,0,.461.153l1.212.3a3.544,3.544,0,0,1,.389.118,1.573,1.573,0,0,1,.362.187.941.941,0,0,1,.267.282.743.743,0,0,1,.1.4.87.87,0,0,1-.145.507,1.2,1.2,0,0,1-.362.343,1.62,1.62,0,0,1-.469.194,1.984,1.984,0,0,1-.465.061,3.247,3.247,0,0,1-.7-.072,1.573,1.573,0,0,1-.568-.24,1.15,1.15,0,0,1-.377-.45A1.532,1.532,0,0,1,23.384-2.843Z" transform="translate(36.07 37.794)"/><path class="a" d="M209.107,48.771a1.84,1.84,0,0,1,1.711,1.125l8.188,19.842a1.551,1.551,0,0,1,.09.539,1.307,1.307,0,0,1-1.305,1.305h-.45a1.369,1.369,0,0,1-1.259-.811l-7.469-18.492a.533.533,0,0,0-.679-.278.437.437,0,0,0-.267.232l-8.1,19.032a.562.562,0,0,1-.495.315h-.225a.515.515,0,0,1-.2-.041.528.528,0,0,1-.254-.679L207.308,49.9a1.859,1.859,0,0,1,1.709-1.125Z" transform="translate(-116.425 -48.771)"/><path class="a" d="M184.854,65.238v.585a10.4,10.4,0,0,1-.12,1.406,8.257,8.257,0,0,1-.338,1.4,4.869,4.869,0,0,1-.6,1.222,4.646,4.646,0,0,1-.743.761A6.677,6.677,0,0,1,179.9,71.9c-2.313.357-4.843.1-6.389-1.125-1.6-1.267-2.091-3.209-2.339-5.575v0a.121.121,0,0,1,.008-.026.048.048,0,0,0,.008-.023c.012-.026.022-.056.026-.063a.639.639,0,0,1,.859-.338c.416.161.405.671.405,1.193a5.512,5.512,0,0,0,1.26,3.4c1.376,1.59,4.956,2.1,6.7.944,1.315-.87,1.308-2.977,1.3-4.454V50.3a1.571,1.571,0,0,1,1.575-1.53,1.532,1.532,0,0,1,1.53,1.53Z" transform="translate(-112.104 -48.771)"/><path class="a" d="M171.192,68.24a.059.059,0,0,1-.007.023.163.163,0,0,0,.007-.023" transform="translate(-112.105 -51.866)"/><path class="a" d="M156.537,50.3V70.053a1.571,1.571,0,0,1-1.575,1.53h-.18a1.5,1.5,0,0,1-1.26-.675L140.789,51.741l.934-.622,11.665,17.54V50.3a1.575,1.575,0,0,1,3.15,0" transform="translate(-107.273 -48.771)"/><path class="a" d="M138.7,48.771a1.581,1.581,0,0,1,1.3.675l1.114,1.672-.934.622V70.053a1.57,1.57,0,0,1-1.574,1.53h-.09a1.532,1.532,0,0,1-1.531-1.53V50.3a1.532,1.532,0,0,1,1.531-1.53Z" transform="translate(-106.669 -48.771)"/><path class="a" d="M111.687,48.771A1.924,1.924,0,0,1,113.4,49.9l8.189,19.842a1.551,1.551,0,0,1,.09.539,1.307,1.307,0,0,1-1.305,1.305h-.45a1.369,1.369,0,0,1-1.259-.811l-7.469-18.492a.533.533,0,0,0-.679-.278.436.436,0,0,0-.267.232l-8.1,19.032a.563.563,0,0,1-.495.315h-.225a.508.508,0,0,1-.2-.041.524.524,0,0,1-.255-.679L109.887,49.9a1.862,1.862,0,0,1,1.71-1.125Z" transform="translate(-100.938 -48.771)"/></svg></span>
+    </div>
+  </div>
 
-  <div>
-    <div class="chero__inner">
-      <p class="mark-eyebrow" data-reveal>Édition limitée · Juin 2027</p>
-
-      <h1 class="sr-only">Anja × Havaianas</h1>
-      <div class="brand-lockup brand-lockup--xl" data-reveal data-delay="1" style="justify-content:center; margin-top:1.25rem" aria-hidden="true">
-        <span class="brand-lockup__hav">havaianas</span>
-        <span class="brand-lockup__x">×</span>
-        <span class="brand-lockup__anja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.671 36.85"><defs><style>.a{fill:currentColor;}</style></defs><path class="a" d="M1.171-3.826V-6.053H2.956a1.341,1.341,0,0,1,.877.275,1.02,1.02,0,0,1,.336.839,1.02,1.02,0,0,1-.336.839,1.341,1.341,0,0,1-.877.275ZM.653-6.5v5.444h.519V-3.384h1.9a2.019,2.019,0,0,0,.663-.1,1.4,1.4,0,0,0,.511-.305,1.348,1.348,0,0,0,.328-.492,1.774,1.774,0,0,0,.114-.656A1.774,1.774,0,0,0,4.572-5.6a1.348,1.348,0,0,0-.328-.492,1.4,1.4,0,0,0-.511-.305,2.019,2.019,0,0,0-.663-.1Zm7.923,0h.58L11.29-1.051h-.557L8.842-5.977,6.936-1.051H6.379ZM13.829-3.91V-6.053h1.937a1.2,1.2,0,0,1,.885.29,1.072,1.072,0,0,1,.29.793,1,1,0,0,1-.1.446,1.027,1.027,0,0,1-.255.332,1.121,1.121,0,0,1-.374.21,1.391,1.391,0,0,1-.45.072ZM13.311-6.5v5.444h.519V-3.468H15.8a.967.967,0,0,1,.576.122.9.9,0,0,1,.32.362,1.576,1.576,0,0,1,.145.511q.034.286.05.576.008.084.015.2t.019.233a1.652,1.652,0,0,0,.038.229.666.666,0,0,0,.072.187H17.6a.729.729,0,0,1-.133-.278A2.473,2.473,0,0,1,17.4-1.71q-.023-.2-.031-.4t-.015-.336a2.707,2.707,0,0,0-.065-.454,1.082,1.082,0,0,0-.16-.37.889.889,0,0,0-.286-.263,1.208,1.208,0,0,0-.442-.141v-.015a1.217,1.217,0,0,0,.793-.488,1.529,1.529,0,0,0,.267-.9,1.424,1.424,0,0,0-.133-.637,1.23,1.23,0,0,0-.358-.442,1.538,1.538,0,0,0-.526-.255A2.363,2.363,0,0,0,15.8-6.5Zm6.649,0v5.444h.519V-6.5Zm3.424,3.652h-.519A1.924,1.924,0,0,0,23-1.981a1.5,1.5,0,0,0,.446.587,1.921,1.921,0,0,0,.7.339,3.431,3.431,0,0,0,.892.111,3.364,3.364,0,0,0,.824-.088,2.124,2.124,0,0,0,.576-.229,1.3,1.3,0,0,0,.366-.316,1.614,1.614,0,0,0,.206-.347,1.23,1.23,0,0,0,.092-.324,2.069,2.069,0,0,0,.019-.244,1.342,1.342,0,0,0-.111-.572,1.159,1.159,0,0,0-.305-.4,1.8,1.8,0,0,0-.45-.275,3.815,3.815,0,0,0-.545-.187l-1.327-.328a2,2,0,0,1-.316-.1.947.947,0,0,1-.263-.16.7.7,0,0,1-.179-.24.788.788,0,0,1-.065-.332,1.04,1.04,0,0,1,.114-.511.947.947,0,0,1,.3-.332,1.289,1.289,0,0,1,.435-.183,2.282,2.282,0,0,1,.515-.057,1.888,1.888,0,0,1,.553.08,1.435,1.435,0,0,1,.465.236,1.217,1.217,0,0,1,.328.389,1.261,1.261,0,0,1,.141.545h.519a1.578,1.578,0,0,0-.164-.736,1.587,1.587,0,0,0-.438-.53,1.9,1.9,0,0,0-.641-.32,2.737,2.737,0,0,0-.77-.107,2.307,2.307,0,0,0-.938.164,1.665,1.665,0,0,0-.576.4,1.293,1.293,0,0,0-.286.5,1.727,1.727,0,0,0-.076.465,1.278,1.278,0,0,0,.1.541,1.159,1.159,0,0,0,.271.374,1.313,1.313,0,0,0,.393.244,3.631,3.631,0,0,0,.461.153l1.212.3a3.544,3.544,0,0,1,.389.118,1.573,1.573,0,0,1,.362.187.941.941,0,0,1,.267.282.743.743,0,0,1,.1.4.87.87,0,0,1-.145.507,1.2,1.2,0,0,1-.362.343,1.62,1.62,0,0,1-.469.194,1.984,1.984,0,0,1-.465.061,3.247,3.247,0,0,1-.7-.072,1.573,1.573,0,0,1-.568-.24,1.15,1.15,0,0,1-.377-.45A1.532,1.532,0,0,1,23.384-2.843Z" transform="translate(36.07 37.794)"/><path class="a" d="M209.107,48.771a1.84,1.84,0,0,1,1.711,1.125l8.188,19.842a1.551,1.551,0,0,1,.09.539,1.307,1.307,0,0,1-1.305,1.305h-.45a1.369,1.369,0,0,1-1.259-.811l-7.469-18.492a.533.533,0,0,0-.679-.278.437.437,0,0,0-.267.232l-8.1,19.032a.562.562,0,0,1-.495.315h-.225a.515.515,0,0,1-.2-.041.528.528,0,0,1-.254-.679L207.308,49.9a1.859,1.859,0,0,1,1.709-1.125Z" transform="translate(-116.425 -48.771)"/><path class="a" d="M184.854,65.238v.585a10.4,10.4,0,0,1-.12,1.406,8.257,8.257,0,0,1-.338,1.4,4.869,4.869,0,0,1-.6,1.222,4.646,4.646,0,0,1-.743.761A6.677,6.677,0,0,1,179.9,71.9c-2.313.357-4.843.1-6.389-1.125-1.6-1.267-2.091-3.209-2.339-5.575v0a.121.121,0,0,1,.008-.026.048.048,0,0,0,.008-.023c.012-.026.022-.056.026-.063a.639.639,0,0,1,.859-.338c.416.161.405.671.405,1.193a5.512,5.512,0,0,0,1.26,3.4c1.376,1.59,4.956,2.1,6.7.944,1.315-.87,1.308-2.977,1.3-4.454V50.3a1.571,1.571,0,0,1,1.575-1.53,1.532,1.532,0,0,1,1.53,1.53Z" transform="translate(-112.104 -48.771)"/><path class="a" d="M171.192,68.24a.059.059,0,0,1-.007.023.163.163,0,0,0,.007-.023" transform="translate(-112.105 -51.866)"/><path class="a" d="M156.537,50.3V70.053a1.571,1.571,0,0,1-1.575,1.53h-.18a1.5,1.5,0,0,1-1.26-.675L140.789,51.741l.934-.622,11.665,17.54V50.3a1.575,1.575,0,0,1,3.15,0" transform="translate(-107.273 -48.771)"/><path class="a" d="M138.7,48.771a1.581,1.581,0,0,1,1.3.675l1.114,1.672-.934.622V70.053a1.57,1.57,0,0,1-1.574,1.53h-.09a1.532,1.532,0,0,1-1.531-1.53V50.3a1.532,1.532,0,0,1,1.531-1.53Z" transform="translate(-106.669 -48.771)"/><path class="a" d="M111.687,48.771A1.924,1.924,0,0,1,113.4,49.9l8.189,19.842a1.551,1.551,0,0,1,.09.539,1.307,1.307,0,0,1-1.305,1.305h-.45a1.369,1.369,0,0,1-1.259-.811l-7.469-18.492a.533.533,0,0,0-.679-.278.436.436,0,0,0-.267.232l-8.1,19.032a.563.563,0,0,1-.495.315h-.225a.508.508,0,0,1-.2-.041.524.524,0,0,1-.255-.679L109.887,49.9a1.862,1.862,0,0,1,1.71-1.125Z" transform="translate(-100.938 -48.771)"/></svg></span>
-      </div>
-
-      <p class="chero__claim" data-reveal data-delay="2">Paris rencontre Rio. Un imprimé, deux savoir-faire, un seul été.</p>
-
-      <div class="chero__cta" data-reveal data-delay="3">
-        <a class="btn btn--light" href="#duo">Découvrir les duos</a>
-        <a class="btn btn--outline-light" href="#acces">Accès anticipé</a>
+  <div class="hero__tag">
+    <div class="hero__tag__thumb">
+      <div class="ph">
+        <img data-fallback src="assets/images/hero-collab-tag.jpg" alt="Le Fidèle, édition Anja × Havaianas">
       </div>
     </div>
+    <div class="hero__tag__body">
+      <strong>Le Fidèle</strong>
+      <span>Anja × Havaianas</span>
+    </div>
+  </div>
+</section>
 
-    <div class="chero__strip" data-reveal data-delay="2">
-      <div class="ph">
-        <img data-fallback src="assets/images/hero-collab-tag.jpg" alt="Le Fidèle, une pièce">
-        <span class="ph__flag"><i></i>hero-collab-tag.jpg</span>
-      </div>
-      <div class="ph">
-        <img data-fallback src="assets/images/collab-tongs-detail.jpg" alt="Tongs Havaianas, imprimé édition limitée">
-        <span class="ph__flag"><i></i>collab-tongs-detail.jpg</span>
-      </div>
-      <div class="ph">
-        <img data-fallback src="assets/images/le-piccolo-lifestyle-dos.webp" alt="Anja Paris, plage">
-        <span class="ph__flag"><i></i>le-piccolo-lifestyle-dos.webp</span>
-      </div>
-      <div class="ph">
-        <img data-fallback src="assets/images/le-petillant-lifestyle-1.webp" alt="Anja Paris, plage">
-        <span class="ph__flag"><i></i>le-petillant-lifestyle-1.webp</span>
-      </div>
+<!-- ===================================================================
+     Intro — la promesse de la collab en une phrase
+     =================================================================== -->
+<section class="section section--tight wrap">
+  <div data-reveal style="max-width:640px">
+    <p class="eyebrow">La collaboration</p>
+    <h1 style="font-size:var(--fs-h1)">Paris rencontre Rio.</h1>
+    <p class="lede" style="margin-top:1.25rem">Un imprimé dessiné à quatre mains, décliné sur Le Fidèle et sur une paire de tongs Havaianas assorties. Une pièce, deux savoir-faire, une série limitée.</p>
+    <div style="display:flex; gap:.875rem; flex-wrap:wrap; margin-top:1.75rem">
+      <a class="btn btn--solid" href="#duo">Découvrir la pièce</a>
+      <a class="btn btn--ghost" href="#acces">Accès anticipé</a>
     </div>
   </div>
 </section>
@@ -131,18 +132,17 @@
      =================================================================== -->
 <section class="section manifesto">
   <div class="wrap">
-    <div class="note note--tl" data-n="2">Une collab ne tient pas sur deux logos côte à côte. Il faut une raison. Ici : les deux marques s'adressent à la même femme, au même moment de la journée.</div>
 
     <div class="manifesto__grid">
       <div data-reveal>
-        <p class="eyebrow eyebrow--accent">Le manifeste</p>
+        <p class="eyebrow">Le manifeste</p>
         <h2>Deux maisons, la même journée d'été.</h2>
       </div>
 
       <div class="manifesto__body" data-reveal data-delay="1">
         <p>Anja dessine à Paris des maillots qu'on garde dix étés. Havaianas fabrique depuis 1962 la tong que le monde entier porte les pieds dans le sable. L'une habille le bain, l'autre le chemin qui y mène.</p>
         <p>Entre les deux, il manquait quelque chose : un vestiaire de plage cohérent, où le maillot et la tong se répondent au lieu de se croiser par hasard dans un sac.</p>
-        <p>Cette collection est notre réponse. <strong>Un imprimé unique, dessiné à quatre mains</strong>, décliné sur six maillots confectionnés au Portugal et deux tongs fabriquées au Brésil. Vendus séparément, ou en duo.</p>
+        <p>Cette collection démarre par <strong>une pièce, un imprimé dessiné à quatre mains</strong> : Le Fidèle, confectionné au Portugal, et sa tong assortie, fabriquée au Brésil. Vendus séparément, ou en duo.</p>
 
         <div class="vs">
           <div class="vs__cell">
@@ -170,111 +170,48 @@
 </section>
 
 <!-- ===================================================================
-     Les duos
+     Le duo — la pièce et sa tong assortie, en grand.
+     Même composant que le bandeau collab de la home.
      =================================================================== -->
-<section class="section duo" id="duo">
-  <div class="wrap">
-    <div class="note note--tr" data-n="3">Le duo maillot + tong est le cœur de l'offre : il augmente le panier moyen et rend la collab lisible en une image.</div>
-
-    <div class="section-head section-head--split" data-reveal>
-      <div>
-        <p class="eyebrow eyebrow--accent">La collection</p>
-        <h2>Trois duos. Un seul imprimé.</h2>
+<section class="collab-band" id="duo">
+  <div class="collab-band__grid">
+    <div class="collab-band__copy" data-reveal>
+      <p class="mark-eyebrow">La pièce</p>
+      <div class="brand-lockup brand-lockup--lg">
+        <span class="brand-lockup__hav">havaianas</span>
+        <span class="brand-lockup__x">×</span>
+        <span class="brand-lockup__anja"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.671 36.85"><defs><style>.a{fill:currentColor;}</style></defs><path class="a" d="M1.171-3.826V-6.053H2.956a1.341,1.341,0,0,1,.877.275,1.02,1.02,0,0,1,.336.839,1.02,1.02,0,0,1-.336.839,1.341,1.341,0,0,1-.877.275ZM.653-6.5v5.444h.519V-3.384h1.9a2.019,2.019,0,0,0,.663-.1,1.4,1.4,0,0,0,.511-.305,1.348,1.348,0,0,0,.328-.492,1.774,1.774,0,0,0,.114-.656A1.774,1.774,0,0,0,4.572-5.6a1.348,1.348,0,0,0-.328-.492,1.4,1.4,0,0,0-.511-.305,2.019,2.019,0,0,0-.663-.1Zm7.923,0h.58L11.29-1.051h-.557L8.842-5.977,6.936-1.051H6.379ZM13.829-3.91V-6.053h1.937a1.2,1.2,0,0,1,.885.29,1.072,1.072,0,0,1,.29.793,1,1,0,0,1-.1.446,1.027,1.027,0,0,1-.255.332,1.121,1.121,0,0,1-.374.21,1.391,1.391,0,0,1-.45.072ZM13.311-6.5v5.444h.519V-3.468H15.8a.967.967,0,0,1,.576.122.9.9,0,0,1,.32.362,1.576,1.576,0,0,1,.145.511q.034.286.05.576.008.084.015.2t.019.233a1.652,1.652,0,0,0,.038.229.666.666,0,0,0,.072.187H17.6a.729.729,0,0,1-.133-.278A2.473,2.473,0,0,1,17.4-1.71q-.023-.2-.031-.4t-.015-.336a2.707,2.707,0,0,0-.065-.454,1.082,1.082,0,0,0-.16-.37.889.889,0,0,0-.286-.263,1.208,1.208,0,0,0-.442-.141v-.015a1.217,1.217,0,0,0,.793-.488,1.529,1.529,0,0,0,.267-.9,1.424,1.424,0,0,0-.133-.637,1.23,1.23,0,0,0-.358-.442,1.538,1.538,0,0,0-.526-.255A2.363,2.363,0,0,0,15.8-6.5Zm6.649,0v5.444h.519V-6.5Zm3.424,3.652h-.519A1.924,1.924,0,0,0,23-1.981a1.5,1.5,0,0,0,.446.587,1.921,1.921,0,0,0,.7.339,3.431,3.431,0,0,0,.892.111,3.364,3.364,0,0,0,.824-.088,2.124,2.124,0,0,0,.576-.229,1.3,1.3,0,0,0,.366-.316,1.614,1.614,0,0,0,.206-.347,1.23,1.23,0,0,0,.092-.324,2.069,2.069,0,0,0,.019-.244,1.342,1.342,0,0,0-.111-.572,1.159,1.159,0,0,0-.305-.4,1.8,1.8,0,0,0-.45-.275,3.815,3.815,0,0,0-.545-.187l-1.327-.328a2,2,0,0,1-.316-.1.947.947,0,0,1-.263-.16.7.7,0,0,1-.179-.24.788.788,0,0,1-.065-.332,1.04,1.04,0,0,1,.114-.511.947.947,0,0,1,.3-.332,1.289,1.289,0,0,1,.435-.183,2.282,2.282,0,0,1,.515-.057,1.888,1.888,0,0,1,.553.08,1.435,1.435,0,0,1,.465.236,1.217,1.217,0,0,1,.328.389,1.261,1.261,0,0,1,.141.545h.519a1.578,1.578,0,0,0-.164-.736,1.587,1.587,0,0,0-.438-.53,1.9,1.9,0,0,0-.641-.32,2.737,2.737,0,0,0-.77-.107,2.307,2.307,0,0,0-.938.164,1.665,1.665,0,0,0-.576.4,1.293,1.293,0,0,0-.286.5,1.727,1.727,0,0,0-.076.465,1.278,1.278,0,0,0,.1.541,1.159,1.159,0,0,0,.271.374,1.313,1.313,0,0,0,.393.244,3.631,3.631,0,0,0,.461.153l1.212.3a3.544,3.544,0,0,1,.389.118,1.573,1.573,0,0,1,.362.187.941.941,0,0,1,.267.282.743.743,0,0,1,.1.4.87.87,0,0,1-.145.507,1.2,1.2,0,0,1-.362.343,1.62,1.62,0,0,1-.469.194,1.984,1.984,0,0,1-.465.061,3.247,3.247,0,0,1-.7-.072,1.573,1.573,0,0,1-.568-.24,1.15,1.15,0,0,1-.377-.45A1.532,1.532,0,0,1,23.384-2.843Z" transform="translate(36.07 37.794)"/><path class="a" d="M209.107,48.771a1.84,1.84,0,0,1,1.711,1.125l8.188,19.842a1.551,1.551,0,0,1,.09.539,1.307,1.307,0,0,1-1.305,1.305h-.45a1.369,1.369,0,0,1-1.259-.811l-7.469-18.492a.533.533,0,0,0-.679-.278.437.437,0,0,0-.267.232l-8.1,19.032a.562.562,0,0,1-.495.315h-.225a.515.515,0,0,1-.2-.041.528.528,0,0,1-.254-.679L207.308,49.9a1.859,1.859,0,0,1,1.709-1.125Z" transform="translate(-116.425 -48.771)"/><path class="a" d="M184.854,65.238v.585a10.4,10.4,0,0,1-.12,1.406,8.257,8.257,0,0,1-.338,1.4,4.869,4.869,0,0,1-.6,1.222,4.646,4.646,0,0,1-.743.761A6.677,6.677,0,0,1,179.9,71.9c-2.313.357-4.843.1-6.389-1.125-1.6-1.267-2.091-3.209-2.339-5.575v0a.121.121,0,0,1,.008-.026.048.048,0,0,0,.008-.023c.012-.026.022-.056.026-.063a.639.639,0,0,1,.859-.338c.416.161.405.671.405,1.193a5.512,5.512,0,0,0,1.26,3.4c1.376,1.59,4.956,2.1,6.7.944,1.315-.87,1.308-2.977,1.3-4.454V50.3a1.571,1.571,0,0,1,1.575-1.53,1.532,1.532,0,0,1,1.53,1.53Z" transform="translate(-112.104 -48.771)"/><path class="a" d="M171.192,68.24a.059.059,0,0,1-.007.023.163.163,0,0,0,.007-.023" transform="translate(-112.105 -51.866)"/><path class="a" d="M156.537,50.3V70.053a1.571,1.571,0,0,1-1.575,1.53h-.18a1.5,1.5,0,0,1-1.26-.675L140.789,51.741l.934-.622,11.665,17.54V50.3a1.575,1.575,0,0,1,3.15,0" transform="translate(-107.273 -48.771)"/><path class="a" d="M138.7,48.771a1.581,1.581,0,0,1,1.3.675l1.114,1.672-.934.622V70.053a1.57,1.57,0,0,1-1.574,1.53h-.09a1.532,1.532,0,0,1-1.531-1.53V50.3a1.532,1.532,0,0,1,1.531-1.53Z" transform="translate(-106.669 -48.771)"/><path class="a" d="M111.687,48.771A1.924,1.924,0,0,1,113.4,49.9l8.189,19.842a1.551,1.551,0,0,1,.09.539,1.307,1.307,0,0,1-1.305,1.305h-.45a1.369,1.369,0,0,1-1.259-.811l-7.469-18.492a.533.533,0,0,0-.679-.278.436.436,0,0,0-.267.232l-8.1,19.032a.563.563,0,0,1-.495.315h-.225a.508.508,0,0,1-.2-.041.524.524,0,0,1-.255-.679L109.887,49.9a1.862,1.862,0,0,1,1.71-1.125Z" transform="translate(-100.938 -48.771)"/></svg></span>
       </div>
-      <a class="link-u" href="#">Voir les 8 pièces</a>
+      <p>Le Fidèle, une pièce asymétrique, et sa tong Havaianas assortie. Même imprimé, même série limitée, un seul geste pour habiller la plage.</p>
+      <a class="link-u" style="color:var(--paper)" href="#" data-add>Ajouter le duo — 185 €</a>
     </div>
-
-    <div class="duo__grid">
-
-      <article class="duo__card" data-reveal>
-        <div class="duo__stack">
-          <div class="ph ph--sun"><span class="ph__flag">Photo · maillot une pièce</span></div>
-          <div class="ph ph--vert"><span class="ph__flag">Tong</span></div>
-        </div>
-        <div class="duo__body">
-          <h3>Le Solaire</h3>
-          <p>Une pièce décolleté plongeant, jaune soleil. La tong assortie, semelle vert Rio.</p>
-          <ul class="duo__lines">
-            <li><span>Maillot une pièce · bonnet A–D</span><span>145 €</span></li>
-            <li><span>Tongs Havaianas × Anja · 35–42</span><span>55 €</span></li>
-          </ul>
-          <div class="duo__total">
-            <strong>185 €</strong>
-            <em>−15 € en duo</em>
-          </div>
-          <a class="btn btn--solid" href="#" data-add>Ajouter le duo</a>
-        </div>
-      </article>
-
-      <article class="duo__card" data-reveal data-delay="1">
-        <div class="duo__stack">
-          <div class="ph ph--vert"><span class="ph__flag">Photo · deux pièces</span></div>
-          <div class="ph ph--sun"><span class="ph__flag">Tong</span></div>
-        </div>
-        <div class="duo__body">
-          <h3>Le Rio</h3>
-          <p>Deux pièces à nouer, vert amande et jaune. Le haut se règle, le bas remonte haut sur la jambe.</p>
-          <ul class="duo__lines">
-            <li><span>Haut de maillot · bonnet A–E</span><span>85 €</span></li>
-            <li><span>Bas de maillot · 34–46</span><span>75 €</span></li>
-            <li><span>Tongs Havaianas × Anja · 35–42</span><span>55 €</span></li>
-          </ul>
-          <div class="duo__total">
-            <strong>195 €</strong>
-            <em>−20 € en duo</em>
-          </div>
-          <a class="btn btn--solid" href="#" data-add>Ajouter le duo</a>
-        </div>
-      </article>
-
-      <article class="duo__card" data-reveal data-delay="2">
-        <div class="duo__stack">
-          <div class="ph ph--terra"><span class="ph__flag">Photo · maillot une pièce</span></div>
-          <div class="ph ph--sable"><span class="ph__flag">Tong</span></div>
-        </div>
-        <div class="duo__body">
-          <h3>Le Terracotta</h3>
-          <p>Une pièce dos nu, terracotta et sable. La version la plus parisienne de la collection.</p>
-          <ul class="duo__lines">
-            <li><span>Maillot une pièce · bonnet A–D</span><span>145 €</span></li>
-            <li><span>Tongs Havaianas × Anja · 35–42</span><span>55 €</span></li>
-          </ul>
-          <div class="duo__total">
-            <strong>185 €</strong>
-            <em>−15 € en duo</em>
-          </div>
-          <a class="btn btn--solid" href="#" data-add>Ajouter le duo</a>
-        </div>
-      </article>
-
+    <div class="collab-band__visual">
+      <div class="ph">
+        <img data-fallback src="assets/images/collab-duo-le-fidele.jpg" alt="Le Fidèle et ses tongs Havaianas assorties">
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ===================================================================
-     L'imprimé
+     Détail — la tong, en gros plan.
+     Même composant éditorial que la home (image / texte en alternance).
      =================================================================== -->
-<section class="section print">
-  <div class="wrap">
-    <div class="print__grid">
-      <div data-reveal>
-        <p class="eyebrow" style="color:var(--hav-yellow)">L'imprimé</p>
-        <h2>Le Pavé de Copacabana, revu par Paris.</h2>
-        <p class="lede" style="margin-top:1.5rem">Le motif part des vagues noires et blanches du trottoir de Copacabana, dessiné en 1970 par Roberto Burle Marx. Notre atelier parisien en a resserré l'amplitude et l'a reteint dans la palette solaire d'Anja : jaune, vert amande, terracotta, sable.</p>
-        <p class="lede" style="margin-top:1.25rem">Résultat : un motif qui se lit de loin sur la tong et de près sur le maillot. Tissé et non imprimé sur le textile — il ne passe pas au soleil.</p>
-
-        <div class="print__swatches" data-reveal data-delay="1">
-          <div style="background:#E3A244"><span>Jaune soleil</span></div>
-          <div style="background:#00884A"><span>Vert Rio</span></div>
-          <div style="background:#C2643C"><span>Terracotta</span></div>
-          <div style="background:#E7D5B8"><span>Sable</span></div>
-        </div>
-      </div>
-
-      <div class="print__media" data-reveal data-delay="1">
-        <div class="ph ph--sun"><span class="ph__flag">Visuel · planche d'imprimé, motif en répétition</span></div>
-      </div>
+<section class="editorial editorial--reverse">
+  <div class="editorial__media" data-reveal>
+    <div class="ph">
+      <img data-fallback src="assets/images/collab-tongs-detail.jpg" alt="Tongs Havaianas, imprimé édition limitée Anja">
     </div>
+  </div>
+  <div class="editorial__body" data-reveal data-delay="1">
+    <p class="eyebrow">Le détail</p>
+    <h2>La tong, fabriquée au Brésil depuis 1962.</h2>
+    <p class="lede">Havaianas apporte son savoir-faire : la semelle texturée signature, la lanière en caoutchouc, et l'imprimé Anja reproduit fidèlement sur la bride. La même exigence de fabrication que sur le maillot, dans un tout autre atelier.</p>
+    <ul class="facts">
+      <li><strong>Fabrication</strong><span>Brésil — ateliers Havaianas, depuis 1962.</span></li>
+      <li><strong>Imprimé</strong><span>Identique à celui du maillot Le Fidèle.</span></li>
+      <li><strong>Pointures</strong><span>Du 35 au 42.</span></li>
+    </ul>
   </div>
 </section>
 
@@ -284,10 +221,90 @@
 <section class="section section--tight figures">
   <div class="wrap">
     <div class="figures__grid">
-      <div class="figures__item" data-reveal><strong>8</strong><span>pièces en série limitée</span></div>
+      <div class="figures__item" data-reveal><strong>2</strong><span>pièces : le maillot et sa tong</span></div>
       <div class="figures__item" data-reveal data-delay="1"><strong>1</strong><span>imprimé dessiné à quatre mains</span></div>
       <div class="figures__item" data-reveal data-delay="2"><strong>48 h</strong><span>d'accès anticipé newsletter</span></div>
       <div class="figures__item" data-reveal data-delay="3"><strong>185 €</strong><span>le duo maillot + tongs</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================
+     Compléter le look — le reste du catalogue Anja, pour prolonger
+     la collab sans inventer de fausses nouvelles couleurs Havaianas.
+     Même composant carrousel que la home.
+     =================================================================== -->
+<section class="section wrap" data-rail>
+  <div class="section-head section-head--split" data-reveal>
+    <div>
+      <p class="eyebrow">Compléter le look</p>
+      <h2>Le reste de la collection Anja.</h2>
+    </div>
+    <div class="rail__nav">
+      <button class="rail__btn" data-rail-prev aria-label="Précédent"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="rail__btn" data-rail-next aria-label="Suivant"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+
+  <div class="rail-wrap">
+    <div class="rail" data-reveal>
+
+      <article class="card">
+        <div class="card__media">
+          <button class="card__wish" aria-label="Ajouter à la liste d'envies"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C.8 8 2 4.5 5.5 4c2-.3 3.7.6 4.5 2 .8-1.4 2.5-2.3 4.5-2C18 4.5 19.2 8 21.5 11.5 19 15.65 12 20 12 20z"/></svg></button>
+          <div class="ph ph--cutout">
+            <img data-fallback src="assets/images/le-plongeant-vichy-marine-packshot-cutout.png" alt="Le Plongeant Vichy Marine">
+          </div>
+          <button class="card__quick" data-add>Ajout rapide</button>
+        </div>
+        <div class="card__body">
+          <div><h3>Le Plongeant</h3><p>Vichy marine</p></div>
+          <span class="card__price">125 €</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__media">
+          <button class="card__wish" aria-label="Ajouter à la liste d'envies"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C.8 8 2 4.5 5.5 4c2-.3 3.7.6 4.5 2 .8-1.4 2.5-2.3 4.5-2C18 4.5 19.2 8 21.5 11.5 19 15.65 12 20 12 20z"/></svg></button>
+          <div class="ph ph--cutout">
+            <img data-fallback src="assets/images/le-piccolo-packshot-cutout.png" alt="Le Piccolo">
+          </div>
+          <button class="card__quick" data-add>Ajout rapide</button>
+        </div>
+        <div class="card__body">
+          <div><h3>Le Piccolo</h3><p>Aubergine · liens bleus</p></div>
+          <span class="card__price">135 €</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__media">
+          <button class="card__wish" aria-label="Ajouter à la liste d'envies"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C.8 8 2 4.5 5.5 4c2-.3 3.7.6 4.5 2 .8-1.4 2.5-2.3 4.5-2C18 4.5 19.2 8 21.5 11.5 19 15.65 12 20 12 20z"/></svg></button>
+          <div class="ph ph--cutout">
+            <img data-fallback src="assets/images/le-petillant-packshot-cutout.png" alt="Le Pétillant">
+          </div>
+          <button class="card__quick" data-add>Ajout rapide</button>
+        </div>
+        <div class="card__body">
+          <div><h3>Le Pétillant</h3><p>Haut triangle · bleu électrique</p></div>
+          <span class="card__price">65 €</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card__media">
+          <button class="card__wish" aria-label="Ajouter à la liste d'envies"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.35-9.5-8.5C.8 8 2 4.5 5.5 4c2-.3 3.7.6 4.5 2 .8-1.4 2.5-2.3 4.5-2C18 4.5 19.2 8 21.5 11.5 19 15.65 12 20 12 20z"/></svg></button>
+          <div class="ph ph--cutout">
+            <img data-fallback src="assets/images/le-determine-packshot-cutout.png" alt="Le Déterminé">
+          </div>
+          <button class="card__quick" data-add>Ajout rapide</button>
+        </div>
+        <div class="card__body">
+          <div><h3>Le Déterminé</h3><p>Une pièce sportif · chocolat</p></div>
+          <span class="card__price">125 €</span>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -297,10 +314,9 @@
      =================================================================== -->
 <section class="section drop">
   <div class="wrap">
-    <div class="note note--tl" data-n="4">Un drop daté remplace la promo permanente : on crée de la rareté au lieu de casser le prix. C'est le modèle « ERES Days », appliqué à un événement de marque.</div>
 
     <div class="section-head" data-reveal>
-      <p class="eyebrow eyebrow--accent">Le calendrier</p>
+      <p class="eyebrow">Le calendrier</p>
       <h2>Un lancement en quatre temps.</h2>
     </div>
 
@@ -356,7 +372,7 @@
       <div class="footer__brand">
         <span class="logo" role="img" aria-label="Anja Paris"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.671 36.85"><defs><style>.a{fill:currentColor;}</style></defs><path class="a" d="M1.171-3.826V-6.053H2.956a1.341,1.341,0,0,1,.877.275,1.02,1.02,0,0,1,.336.839,1.02,1.02,0,0,1-.336.839,1.341,1.341,0,0,1-.877.275ZM.653-6.5v5.444h.519V-3.384h1.9a2.019,2.019,0,0,0,.663-.1,1.4,1.4,0,0,0,.511-.305,1.348,1.348,0,0,0,.328-.492,1.774,1.774,0,0,0,.114-.656A1.774,1.774,0,0,0,4.572-5.6a1.348,1.348,0,0,0-.328-.492,1.4,1.4,0,0,0-.511-.305,2.019,2.019,0,0,0-.663-.1Zm7.923,0h.58L11.29-1.051h-.557L8.842-5.977,6.936-1.051H6.379ZM13.829-3.91V-6.053h1.937a1.2,1.2,0,0,1,.885.29,1.072,1.072,0,0,1,.29.793,1,1,0,0,1-.1.446,1.027,1.027,0,0,1-.255.332,1.121,1.121,0,0,1-.374.21,1.391,1.391,0,0,1-.45.072ZM13.311-6.5v5.444h.519V-3.468H15.8a.967.967,0,0,1,.576.122.9.9,0,0,1,.32.362,1.576,1.576,0,0,1,.145.511q.034.286.05.576.008.084.015.2t.019.233a1.652,1.652,0,0,0,.038.229.666.666,0,0,0,.072.187H17.6a.729.729,0,0,1-.133-.278A2.473,2.473,0,0,1,17.4-1.71q-.023-.2-.031-.4t-.015-.336a2.707,2.707,0,0,0-.065-.454,1.082,1.082,0,0,0-.16-.37.889.889,0,0,0-.286-.263,1.208,1.208,0,0,0-.442-.141v-.015a1.217,1.217,0,0,0,.793-.488,1.529,1.529,0,0,0,.267-.9,1.424,1.424,0,0,0-.133-.637,1.23,1.23,0,0,0-.358-.442,1.538,1.538,0,0,0-.526-.255A2.363,2.363,0,0,0,15.8-6.5Zm6.649,0v5.444h.519V-6.5Zm3.424,3.652h-.519A1.924,1.924,0,0,0,23-1.981a1.5,1.5,0,0,0,.446.587,1.921,1.921,0,0,0,.7.339,3.431,3.431,0,0,0,.892.111,3.364,3.364,0,0,0,.824-.088,2.124,2.124,0,0,0,.576-.229,1.3,1.3,0,0,0,.366-.316,1.614,1.614,0,0,0,.206-.347,1.23,1.23,0,0,0,.092-.324,2.069,2.069,0,0,0,.019-.244,1.342,1.342,0,0,0-.111-.572,1.159,1.159,0,0,0-.305-.4,1.8,1.8,0,0,0-.45-.275,3.815,3.815,0,0,0-.545-.187l-1.327-.328a2,2,0,0,1-.316-.1.947.947,0,0,1-.263-.16.7.7,0,0,1-.179-.24.788.788,0,0,1-.065-.332,1.04,1.04,0,0,1,.114-.511.947.947,0,0,1,.3-.332,1.289,1.289,0,0,1,.435-.183,2.282,2.282,0,0,1,.515-.057,1.888,1.888,0,0,1,.553.08,1.435,1.435,0,0,1,.465.236,1.217,1.217,0,0,1,.328.389,1.261,1.261,0,0,1,.141.545h.519a1.578,1.578,0,0,0-.164-.736,1.587,1.587,0,0,0-.438-.53,1.9,1.9,0,0,0-.641-.32,2.737,2.737,0,0,0-.77-.107,2.307,2.307,0,0,0-.938.164,1.665,1.665,0,0,0-.576.4,1.293,1.293,0,0,0-.286.5,1.727,1.727,0,0,0-.076.465,1.278,1.278,0,0,0,.1.541,1.159,1.159,0,0,0,.271.374,1.313,1.313,0,0,0,.393.244,3.631,3.631,0,0,0,.461.153l1.212.3a3.544,3.544,0,0,1,.389.118,1.573,1.573,0,0,1,.362.187.941.941,0,0,1,.267.282.743.743,0,0,1,.1.4.87.87,0,0,1-.145.507,1.2,1.2,0,0,1-.362.343,1.62,1.62,0,0,1-.469.194,1.984,1.984,0,0,1-.465.061,3.247,3.247,0,0,1-.7-.072,1.573,1.573,0,0,1-.568-.24,1.15,1.15,0,0,1-.377-.45A1.532,1.532,0,0,1,23.384-2.843Z" transform="translate(36.07 37.794)"/><path class="a" d="M209.107,48.771a1.84,1.84,0,0,1,1.711,1.125l8.188,19.842a1.551,1.551,0,0,1,.09.539,1.307,1.307,0,0,1-1.305,1.305h-.45a1.369,1.369,0,0,1-1.259-.811l-7.469-18.492a.533.533,0,0,0-.679-.278.437.437,0,0,0-.267.232l-8.1,19.032a.562.562,0,0,1-.495.315h-.225a.515.515,0,0,1-.2-.041.528.528,0,0,1-.254-.679L207.308,49.9a1.859,1.859,0,0,1,1.709-1.125Z" transform="translate(-116.425 -48.771)"/><path class="a" d="M184.854,65.238v.585a10.4,10.4,0,0,1-.12,1.406,8.257,8.257,0,0,1-.338,1.4,4.869,4.869,0,0,1-.6,1.222,4.646,4.646,0,0,1-.743.761A6.677,6.677,0,0,1,179.9,71.9c-2.313.357-4.843.1-6.389-1.125-1.6-1.267-2.091-3.209-2.339-5.575v0a.121.121,0,0,1,.008-.026.048.048,0,0,0,.008-.023c.012-.026.022-.056.026-.063a.639.639,0,0,1,.859-.338c.416.161.405.671.405,1.193a5.512,5.512,0,0,0,1.26,3.4c1.376,1.59,4.956,2.1,6.7.944,1.315-.87,1.308-2.977,1.3-4.454V50.3a1.571,1.571,0,0,1,1.575-1.53,1.532,1.532,0,0,1,1.53,1.53Z" transform="translate(-112.104 -48.771)"/><path class="a" d="M171.192,68.24a.059.059,0,0,1-.007.023.163.163,0,0,0,.007-.023" transform="translate(-112.105 -51.866)"/><path class="a" d="M156.537,50.3V70.053a1.571,1.571,0,0,1-1.575,1.53h-.18a1.5,1.5,0,0,1-1.26-.675L140.789,51.741l.934-.622,11.665,17.54V50.3a1.575,1.575,0,0,1,3.15,0" transform="translate(-107.273 -48.771)"/><path class="a" d="M138.7,48.771a1.581,1.581,0,0,1,1.3.675l1.114,1.672-.934.622V70.053a1.57,1.57,0,0,1-1.574,1.53h-.09a1.532,1.532,0,0,1-1.531-1.53V50.3a1.532,1.532,0,0,1,1.531-1.53Z" transform="translate(-106.669 -48.771)"/><path class="a" d="M111.687,48.771A1.924,1.924,0,0,1,113.4,49.9l8.189,19.842a1.551,1.551,0,0,1,.09.539,1.307,1.307,0,0,1-1.305,1.305h-.45a1.369,1.369,0,0,1-1.259-.811l-7.469-18.492a.533.533,0,0,0-.679-.278.436.436,0,0,0-.267.232l-8.1,19.032a.563.563,0,0,1-.495.315h-.225a.508.508,0,0,1-.2-.041.524.524,0,0,1-.255-.679L109.887,49.9a1.862,1.862,0,0,1,1.71-1.125Z" transform="translate(-100.938 -48.771)"/></svg>
 </span>
-        <p>Maillots de bain et beachwear solaires, dessinés à Paris et confectionnés au Portugal depuis 2017.</p>
+        <p>Maillots de bain et beachwear dessinés à Paris et confectionnés au Portugal depuis 2017.</p>
         <div class="socials">
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
           <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 18l2-7"/><path d="M9 10c0-2 1.5-3 3-3s3 1 3 3-1 4-3 4"/></svg></a>
@@ -366,8 +382,7 @@
       <div class="footer__col">
         <h4>La collab</h4>
         <ul>
-          <li><a href="#duo">Les duos</a></li>
-          <li><a href="#">Les 8 pièces</a></li>
+          <li><a href="#duo">Le Fidèle × Havaianas</a></li>
           <li><a href="#acces">Accès anticipé</a></li>
           <li><a href="#">Guide des tailles</a></li>
         </ul>
@@ -375,10 +390,10 @@
       <div class="footer__col">
         <h4>Boutique</h4>
         <ul>
-          <li><a href="index.html#spotlight">Maillots de bain</a></li>
-          <li><a href="index.html">Beachwear</a></li>
-          <li><a href="index.html">Accessoires</a></li>
-          <li><a href="index.html">Nouveautés</a></li>
+          <li><a href="index.html#icons">One Piece</a></li>
+          <li><a href="index.html#icons">Two Pieces</a></li>
+          <li><a href="index.html#editorial">Ready-to-Wear</a></li>
+          <li><a href="index.html">Retour à l'accueil</a></li>
         </ul>
       </div>
       <div class="footer__col">
@@ -393,8 +408,8 @@
       <div class="footer__col">
         <h4>La Maison</h4>
         <ul>
-          <li><a href="index.html#craft">Nos ateliers</a></li>
-          <li><a href="#">Les fondatrices</a></li>
+          <li><a href="index.html#editorial">Nos ateliers</a></li>
+          <li><a href="index.html#editorial">Les fondatrices</a></li>
           <li><a href="#">Engagements</a></li>
           <li><a href="#">Points de vente</a></li>
         </ul>
@@ -407,10 +422,6 @@
     </div>
   </div>
 </footer>
-
-<button class="notes-toggle" aria-pressed="false">
-  <i></i> Mode présentation
-</button>
 
 <!-- Toast « démo » — voir assets/js/main.js, initDemoToast() -->
 <div class="demo-toast" id="demoToast" role="status" aria-live="polite">

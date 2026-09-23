@@ -195,22 +195,6 @@ p { margin: 0; }
 .ph--cutout::after { display: none; }
 .ph--cutout img { object-fit: contain; padding: 8%; }
 
-.ph__flag {
-  position: absolute; left: .75rem; bottom: .75rem; z-index: 2;
-  display: flex; align-items: center; gap: .4rem;
-  padding: .35rem .65rem;
-  font-size: 9.5px; letter-spacing: .08em; text-transform: uppercase;
-  background: rgba(23,22,19,.6); color: var(--paper);
-  border-radius: 3px; backdrop-filter: blur(6px);
-  opacity: 0; transition: opacity .3s var(--ease);
-  pointer-events: none;
-}
-.ph__flag i {
-  width: 5px; height: 5px; border-radius: 50%; background: #E9B44C; flex: none;
-}
-body.show-notes .ph__flag { opacity: 1; }
-.ph.has-real .ph__flag { display: none; }
-
 /* Anciennes classes d'ambiance — compatibilité collab.html */
 .ph--rouge  { --c1: #D4795F; --c2: #8E241F; }
 .ph--sun    { --c1: #F0C98A; --c2: #C2643C; }
@@ -687,38 +671,6 @@ body.menu-open .drawer { transform: translateX(0); }
 }
 
 /* --------------------------------------------------------------------------
-   19. Mode présentation
-   -------------------------------------------------------------------------- */
-.notes-toggle {
-  position: fixed; left: 1.25rem; bottom: 1.25rem; z-index: 200;
-  display: inline-flex; align-items: center; gap: .55rem;
-  padding: .75rem 1.2rem; border-radius: 100px;
-  background: var(--ink); color: var(--paper);
-  font-size: var(--fs-micro); letter-spacing: .12em; text-transform: uppercase;
-  box-shadow: 0 12px 30px -12px rgba(0,0,0,.5);
-  transition: background-color .3s var(--ease);
-}
-.notes-toggle:hover { background: var(--ink-soft); }
-.notes-toggle i { width: 6px; height: 6px; border-radius: 50%; background: var(--ink-mute); transition: background-color .3s var(--ease); }
-body.show-notes .notes-toggle i { background: #E9B44C; }
-
-.note {
-  display: none; position: absolute; z-index: 40; max-width: 280px;
-  padding: .8rem 1rem; background: #E9B44C; color: var(--ink); border-radius: 6px;
-  font-size: .8125rem; line-height: 1.45; box-shadow: 0 16px 34px -18px rgba(0,0,0,.6);
-}
-.note::before {
-  content: attr(data-n); display: inline-grid; place-items: center;
-  width: 19px; height: 19px; border-radius: 50%; background: var(--ink); color: #E9B44C;
-  font-size: 10.5px; font-weight: 600; margin-right: .5rem; float: left;
-}
-body.show-notes .note { display: block; }
-.note--tl { top: calc(var(--header-h) + 1rem); left: 1rem; }
-.note--tr { top: calc(var(--header-h) + 1rem); right: 1rem; }
-.note--bl { bottom: 1rem; left: 1rem; }
-.note--br { bottom: 1rem; right: 1rem; }
-
-/* --------------------------------------------------------------------------
    20. Révélation au scroll
    -------------------------------------------------------------------------- */
 [data-reveal] { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease-out), transform .9s var(--ease-out); }
@@ -753,8 +705,7 @@ body.show-notes .note { display: block; }
   .ugc__grid { grid-template-columns: repeat(2, 1fr); }
   .ugc__grid .ugc__item:nth-child(n+5) { display: none; }
   .hero__cta .btn { flex: 1 1 100%; }
-  .notes-toggle { left: .75rem; bottom: .75rem; padding: .65rem 1rem; }
-  .hero__tag { position: static; margin: 1.5rem var(--gutter) 4rem; width: auto; max-width: none; opacity: 1; transform: none; }
+  .hero__tag { position: static; margin: 1.5rem var(--gutter) 2rem; width: auto; max-width: none; opacity: 1; transform: none; }
 }
 
 /* --------------------------------------------------------------------------

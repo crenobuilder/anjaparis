@@ -18,17 +18,21 @@ remplace automatiquement, sans toucher au code.
 | `collab-le-rio.jpg` | Carrousel « Anja × Havaianas, la collection » — pièce 2 (deux pièces) |
 | `collab-le-terracotta.jpg` | Carrousel collab — pièce 3 |
 
-`collab.html` (la page dédiée) reste en dégradés placeholder sur sa partie
-visuelle : elle n'a pas encore reçu de pass dédié avec les nouveaux visuels
-(voir ci-dessous), à la différence de la home.
+`collab.html` a été entièrement reconstruite avec les composants de la home
+(hero, bandeau collab, bloc éditorial, carrousel) et ne contient plus aucun
+dégradé placeholder ni produit inventé (Le Rio / Le Terracotta ont été
+retirés de cette page tant qu'ils n'ont pas de vraie photo — ils ne
+subsistent que dans le carrousel de la home, en attente des fichiers
+ci-dessus).
 
 ## Reçu et intégré — collaboration Anja × Havaianas
 
 | Fichier | Origine | Utilisation |
 |---|---|---|
-| `hero-collab.jpg` | Visuel fourni par le client (déjà floqué « havaianas × Anja Paris ») | Hero plein écran de la home |
-| `hero-collab-tag.jpg` | Recadrage de `collab-duo-le-fidele.jpg` | Carte produit flottante du hero |
-| `collab-duo-le-fidele.jpg` | Photo produit fournie par le client, floquée par nos soins (lockup recomposé avec le vrai logo Anja — l'original généré utilisait une police "Anja" inventée par l'IA, différente du logo réel) | Bandeau collab + carrousel « Anja × Havaianas » |
+| `hero-collab.jpg` | Photo fournie par le client, sans flocage | Hero plein écran de la home et de `collab.html` |
+| `hero-collab-tag.jpg` | Recadrage de `collab-duo-le-fidele.jpg` | Carte produit flottante du hero (les deux pages) |
+| `collab-duo-le-fidele.jpg` | Photo produit fournie par le client, floquée par nos soins (lockup recomposé avec le vrai logo Anja — l'original généré utilisait une police "Anja" inventée par l'IA, différente du logo réel) | Bandeau collab (les deux pages) + carrousel « Anja × Havaianas » de la home |
+| `collab-tongs-detail.jpg` | Recadrage de `collab-duo-le-fidele.jpg`, plan serré sur la tong | Bloc éditorial « Le détail » de `collab.html` |
 
 ## Déjà intégré — catalogue réel Anja
 

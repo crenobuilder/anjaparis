@@ -283,30 +283,6 @@
   /* ----------------------------------------------------------------------
      10. Mode présentation
      ---------------------------------------------------------------------- */
-  function initNotes() {
-    var toggle = document.querySelector('.notes-toggle');
-    if (!toggle) return;
-    var KEY = 'anja-notes';
-    var on = false;
-    try { on = sessionStorage.getItem(KEY) === '1'; } catch (err) { /* navigation privée */ }
-
-    function apply() {
-      document.body.classList.toggle('show-notes', on);
-      toggle.setAttribute('aria-pressed', String(on));
-    }
-    toggle.addEventListener('click', function () {
-      on = !on;
-      try { sessionStorage.setItem(KEY, on ? '1' : '0'); } catch (err) { /* ignore */ }
-      apply();
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key !== 'n' && e.key !== 'N') return;
-      if (/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)) return;
-      toggle.click();
-    });
-    apply();
-  }
-
   /* ----------------------------------------------------------------------
      11. Newsletter — retour visuel
      ---------------------------------------------------------------------- */
@@ -374,7 +350,6 @@
     initHeroTag();
     initRails();
     initCart();
-    initNotes();
     initNewsletter();
     initDemoToast();
   }
