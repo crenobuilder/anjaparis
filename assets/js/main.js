@@ -122,6 +122,13 @@
           if (e.target.closest('a')) return;
           close();
         });
+        var closeBtn = mega.querySelector('.mega__close');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            close();
+          });
+        }
       }
     });
 
