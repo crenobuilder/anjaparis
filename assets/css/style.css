@@ -254,6 +254,7 @@ body.menu-open .header::before { opacity: 0; }
 
 .logo {
   display: inline-flex;
+  position: relative; z-index: 91;
   color: currentColor;
   transition: color .4s var(--ease);
 }
@@ -268,6 +269,16 @@ body.menu-open .header::before { opacity: 0; }
 .nav { display: flex; align-items: center; gap: clamp(1rem, 1.8vw, 2rem); }
 .nav--left { justify-content: flex-start; }
 .nav--right { justify-content: flex-end; }
+/* Isole chaque déclencheur de mega dans son propre contexte d'empilement :
+   sans ça, le z-index du panneau plein écran (.mega) "fuit" au niveau du
+   header et passe au-dessus des AUTRES liens de nav, du logo et des
+   icônes utilitaires — les rendant tous impossibles à cliquer tant
+   qu'un mega est ouvert. */
+.nav__item--has-mega { position: relative; z-index: 0; }
+/* Et, à l'intérieur de ce contexte, le lien déclencheur doit rester
+   au-dessus de son PROPRE panneau une fois ouvert — sinon un clic sur
+   ce lien touche en réalité le fond du mega et le referme aussitôt. */
+.nav__item--has-mega > .nav__link { position: relative; z-index: 91; }
 .nav__link {
   font-size: var(--fs-nav); letter-spacing: .1em; text-transform: uppercase; font-weight: 500;
   padding: .4rem 0; position: relative;
