@@ -274,7 +274,7 @@ body.menu-open .header::before { opacity: 0; }
    header et passe au-dessus des AUTRES liens de nav, du logo et des
    icônes utilitaires — les rendant tous impossibles à cliquer tant
    qu'un mega est ouvert. */
-.nav__item--has-mega { position: relative; z-index: 0; }
+.nav__item--has-mega { position: relative; z-index: 0; display: flex; align-items: center; }
 /* Et, à l'intérieur de ce contexte, le lien déclencheur doit rester
    au-dessus de son PROPRE panneau une fois ouvert — sinon un clic sur
    ce lien touche en réalité le fond du mega et le referme aussitôt. */
@@ -397,7 +397,6 @@ body.menu-open .burger span::after  { transform: translateY(-6px) rotate(-45deg)
 .mega__stack a:hover, .mega__stack a:focus-visible {
   color: var(--sun);
 }
-.mega__stack .is-current { color: var(--sun); }
 
 .mega__note {
   margin-top: clamp(1.5rem, 3vw, 2.5rem);
