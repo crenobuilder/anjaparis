@@ -344,7 +344,7 @@ body.menu-open .burger span::after  { transform: translateY(-6px) rotate(-45deg)
    taupe de la marque plutôt qu'un aplat blanc.
    -------------------------------------------------------------------------- */
 .mega {
-  position: fixed; inset: var(--header-h) 0 0 0; z-index: 90;
+  position: fixed; inset: 0; z-index: 90;
   background: rgba(185, 169, 141, .34);
   backdrop-filter: blur(36px) saturate(140%);
   -webkit-backdrop-filter: blur(36px) saturate(140%);
@@ -352,6 +352,7 @@ body.menu-open .burger span::after  { transform: translateY(-6px) rotate(-45deg)
   opacity: 0; visibility: hidden; transform: translateY(-12px);
   transition: opacity .4s var(--ease), transform .45s var(--ease), visibility .4s;
   display: flex; align-items: center; justify-content: center;
+  padding-top: var(--header-h);
   overflow-y: auto;
 }
 .nav__item.is-open .mega { opacity: 1; visibility: visible; transform: translateY(0); }
@@ -508,12 +509,26 @@ body.menu-open .drawer { transform: translateX(0); }
   align-items: stretch; min-height: min(640px, 82vh);
 }
 .collab-band__copy {
+  position: relative;
   display: flex; flex-direction: column; justify-content: center;
   padding: clamp(2.5rem, 5vw, 5rem) var(--gutter);
 }
 .collab-band__copy p { color: rgba(255,255,255,.72); max-width: 40ch; margin: 1.5rem 0 2rem; }
 .collab-band__visual { position: relative; min-height: 320px; }
 .collab-band__visual .ph { position: absolute; inset: 0; }
+
+/* Petit clin d'œil discret Rio, en coin — palmier + drapeau brésilien */
+.collab-band__accent {
+  position: absolute; right: var(--gutter); bottom: clamp(1.5rem, 4vw, 2.5rem);
+  display: flex; align-items: flex-end; gap: .55rem;
+  opacity: .5; pointer-events: none;
+}
+.collab-band__accent img { width: 38px; height: auto; filter: brightness(0) invert(1); }
+.collab-band__accent .flag-br {
+  width: 20px; height: 14px; border-radius: 2px; overflow: hidden; flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.3);
+}
+.collab-band__accent .flag-br svg { display: block; width: 100%; height: 100%; }
 
 @media (max-width: 860px) {
   .collab-band__grid { grid-template-columns: 1fr; min-height: 0; }
