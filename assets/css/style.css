@@ -733,8 +733,18 @@ body.menu-open .drawer { transform: translateX(0); }
 @media (max-width: 960px) {
   .nav, .header__nav-slot .nav { display: none; }
   .burger { display: grid; }
-  .header__inner { grid-template-columns: auto 1fr auto; }
-  .header__nav-slot { order: -1; }
+  /* 1fr auto 1fr (comme le desktop), pas "auto 1fr auto" : sinon la
+     colonne du burger (~32px) et celle des icônes de droite (quasi
+     vides sur mobile) n'ont pas la même largeur, et le logo — dans la
+     colonne du milieu — se retrouve décalé au lieu d'être centré. */
+  .header__inner { grid-template-columns: 1fr auto 1fr; }
+
+  /* La photo du hero est bien plus large que haute ; recadrée en
+     "cover" sur un écran étroit et très vertical, un centrage à 50%
+     tombe entre les deux silhouettes et n'en cadre correctement
+     aucune. On recentre le cadrage sur la silhouette la plus proche
+     du milieu de la photo. */
+  .hero__media img { object-position: 64% center; }
 
   .editorial, .editorial--reverse { grid-template-columns: 1fr; min-height: auto; }
   .editorial__media .ph { aspect-ratio: 4/3; }
